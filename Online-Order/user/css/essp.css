@@ -1,0 +1,595 @@
+.td_top {
+	border-top: solid #94aad6;
+	border-top-width: thin;
+	}
+
+.td_left_bottom {
+	border-bottom: solid #94aad6;
+	border-bottom-width: thin;
+	border-left: solid #94aad6;
+	border-left-width: thin;
+}
+.MainTable {
+	FONT-FAMILY: '宋体',Arial,Verdana; FONT-SIZE: 9pt;
+}
+.Grid1 {
+	FONT-STYLE: normal; FONT-FAMILY: "宋体"; FONT-WEIGHT: normal; FONT-SIZE: 9pt; COLOR: #000033;
+}
+.TextBox {
+	font: 9pt "宋体";
+}
+.td_left {
+	border-left: thin solid #94aad6;
+	border-left-width: thin;
+}
+.td_left_top {
+	border-top: solid #94aad6;
+	border-top-width: thin;
+	border-left: solid #94aad6;
+	border-left-width: thin;
+}
+
+.td_box {
+	border-bottom: thin solid #94aad6;
+	border-left: thin solid #94aad6;
+	border-top: thin solid #94aad6;
+	border-right: thin solid #94aad6;
+}
+
+.td_box2 {
+		border-bottom: thin solid #94aad6;
+	   border-right: thin solid #94aad6;
+	   border-top: thin solid #94aad6;
+}
+
+.td_box3 {
+		border-bottom: thin solid #94aad6;
+	   border-left: thin solid #94aad6;
+	   border-top: thin solid #94aad6;
+}
+
+.td_box4 {
+	border-bottom: thin solid #94aad6;
+
+	border-top: thin solid #94aad6;
+
+}
+
+
+
+.funcadd {
+				font-family: Arial, Helvetica, sans-serif;
+	      font-size: 11px;
+	      color: Black;
+}
+.clicked {
+		font-family: Arial, Helvetica, sans-serif;
+	   font-size: 11px;
+		BACKGROUND-COLOR: #94aad6;
+	    color: #FFFFFF;
+}
+
+.mymenu {
+		 FONT-FAMILY: Arial, Helvetica, sans-serif,sans-serif; TEXT-DECORATION: none
+}
+
+BODY
+{
+    FONT-FAMILY: 12px Arial, Helvetica, sans-serif;
+    FONT-SIZE: 12px;
+    LINE-HEIGHT: 18px;
+}
+table
+{   border : 0px ;
+    LINE-HEIGHT: 18px;
+	font-family: "Arial, Helvetica, sans-serif";
+}
+.head
+{
+font-size:14px; background-color:#ffffff; color:"#00699B"; text-align : left; font-weight : bold;  height:20;
+font-family: "Arial, Helvetica, sans-serif";
+}
+A:link {
+	COLOR: #00699B; TEXT-DECORATION: none; font-size: 12px;font-family: "Arial, Helvetica, sans-serif" }
+A:visited {
+	COLOR: #000000; TEXT-DECORATION: none; font-size: 12px;font-family: "Arial, Helvetica, sans-serif"
+}
+A:hover {
+	COLOR: #0000CC; TEXT-DECORATION: underline; font-size: 12px;font-family: "Arial, Helvetica, sans-serif"
+	}
+.ttitle
+{
+font-size:12px; background-color:#D6E7EF ; color : black; text-align : left; font-weight : bold;  height:20;
+padding-top:2px;padding-bottom:4px;font-family: "Arial, Helvetica, sans-serif";
+}
+.list_desc
+{
+	text-align : left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+
+}
+.list_range
+{
+	text-align : left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+}
+.tdc
+{
+font-size : 12px;font-style : normal;font-family: "Arial, Helvetica, sans-serif";	text-align:left;
+}
+.rang_desc
+{
+font-size: 12px; line-height: normal; text-align: left;font-style: normal;font-weight : normal;font-family: "Arial, Helvetica, sans-serif";
+}
+.tdl
+{
+font-size : 12px;font-style : normal;font-family: "Arial, Helvetica, sans-serif";	text-align:left;color:"#00699B";
+}
+.tr_even
+{
+font-family: "Arial, Helvetica, sans-serif"; font-size: 12px; line-height: normal;
+background-color: #fffffd; text-align: left
+
+
+
+}
+.tr_odd      { font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: normal; background-color:
+               #F0F0F0; text-align: left }
+.comanandbar
+{
+ FONT-SIZE: 12px;
+ LINE-HEIGHT: 20px;
+ PADDING-LEFT: 2px;
+ PADDING-RIGHT: 2px;
+; font-family: "Arial, Helvetica, sans-serif"; text-align: right
+}
+
+.commandbar {
+	 FONT-SIZE: 12px;
+ LINE-HEIGHT: 20px;
+ PADDING-LEFT: 2px;
+ PADDING-RIGHT: 2px;
+ font-family: "Arial, Helvetica, sans-serif"; text-align: right;
+}
+
+.tdm
+{
+font-family: "Arial, Helvetica, sans-serif"; font-size: 12px; text-align: right
+}
+.tablein
+{
+  border : 1px none #000000;
+  LINE-HEIGHT: 18px;
+}
+.tableout
+{
+  border : 0px solid #000000;border-color:"#000000";
+  LINE-HEIGHT: 18px;
+}
+
+.td_top_thick {
+		border-top: solid #94aad6;
+	   border-top-width: thick;
+}
+
+.input
+{
+BACKGROUND-COLOR: white;font-family: "Arial, Helvetica, sans-serif";FONT-SIZE: 12px
+}
+
+.input_readonly {
+	BACKGROUND-COLOR: #F0F0F0;font-family: "Arial, Helvetica, sans-serif";FONT-SIZE: 12px
+}
+
+.input_readonly2 {
+	BACKGROUND-COLOR: #F0F0F0
+}
+
+.select
+{
+FONT-SIZE: 12px
+}
+.button {
+	BORDER-RIGHT: #104a7b 1px solid; BORDER-TOP: #afc4d5 1px solid; FONT-SIZE: 11px; BACKGROUND: #d6e7ef; BORDER-LEFT: #afc4d5 1px solid; CURSOR: hand; COLOR: #000066; BORDER-BOTTOM: #104a7b 1px solid; FONT-FAMILY: Arial, Helvetica, sans-serif; HEIGHT: 19px; font-weight : bold;TEXT-DECORATION: none
+}
+.tableLink
+{
+  BACKGROUND-COLOR: #C0C0C0;
+  border : 0px solid #66CC00;
+  LINE-HEIGHT: 18px;
+
+}
+link
+{
+COLOR: #ff0000; TEXT-DECORATION: underline
+}
+.tdlink
+{
+  BACKGROUND-COLOR: #C0C0C0;
+  FONT-FAMILY: 8px Verdana, Arial, Helvetica; COLOR: #003399;
+  FONT-SIZE: 8px;
+  text-decoration: none
+
+}
+.linktd
+{
+  FONT-FAMILY: 8px Verdana, Arial, Helvetica; COLOR: #003399;
+  FONT-SIZE: 8px;
+  text-decoration: none
+}
+.menu {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: White; FONT-FAMILY: Arial, Helvetica, sans-serif,sans-serif; TEXT-DECORATION: none
+}
+A.menu:link{
+	COLOR: White;
+	TEXT-DECORATION: none
+}
+A.menu:visited{
+	COLOR: White;
+	TEXT-DECORATION: none
+}
+A.menu:hover{
+	COLOR: #E1B753;
+	TEXT-DECORATION: none
+}
+
+.hei {  font-size: 12px; color: #000000; text-decoration: none}
+.article {
+BORDER-BOTTOM: black 1px solid;
+ BORDER-LEFT: black 1px solid;
+ BORDER-RIGHT: black 1px solid;
+ BORDER-TOP: black 1px solid;
+ FILTER: revealTrans(transition=0,duration=0) blendTrans(duration=0);
+ POSITION: absolute; VISIBILITY: hidden;
+background-color:#FFFF00;
+padding-top: 1px; padding-right: 1px; padding-bottom: 1px; padding-left: 1px}
+.popwin {
+	BACKGROUND-COLOR: #f0f0f0;
+	BORDER-BOTTOM: black 1px solid;
+	BORDER-LEFT: black 1px solid;
+	BORDER-RIGHT: black 1px solid;
+	BORDER-TOP: black 1px solid;
+	HEIGHT: 100px;
+	POSITION: absolute;
+	  WIDTH: 500px;
+	  visibility: hidden;
+	  Z-INDEX: 10;
+	left : 0px;
+}
+
+.problem_number {
+		font-family: Arial Black;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.problem_title {
+	font-family: Arial Black;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.ednone {
+	BACKGROUND-COLOR: transparent;
+	BORDER-BOTTOM: medium none;
+	BORDER-LEFT: medium none;
+	BORDER-RIGHT: medium none;
+	BORDER-TOP: medium none;
+	FONT-SIZE: 12px
+}
+.TransInputBold
+{
+border: none;
+border-style: none;
+background-color: transparent;
+font-family: 宋体;
+font-size: 9pt;
+ background : transparent;
+ font-weight : bold;
+}
+.TransInput
+{
+border: none;
+border-style: none;
+
+background-color: transparent;
+font-family: 宋体;
+font-size: 9pt;
+ background : transparent;
+ font-weight : normal;
+}
+.desc {
+	FONT-SIZE: 18px; COLOR: Black; FONT-STYLE: normal; FONT-FAMILY: "Arial, Helvetica, sans-serif"; TEXT-ALIGN: left;
+	font-weight: bold;
+	}
+.table_title {
+	FONT-SIZE: 13px; COLOR: Black; FONT-STYLE: normal; FONT-FAMILY: "Arial, Helvetica, sans-serif"; TEXT-ALIGN: left;
+	font-weight: bold;
+	border-bottom-color: Black;
+	border-bottom-style: inset;
+	border-bottom-width: thin;
+	border-collapse: separate;
+	}
+
+.td_right {
+	border-right-width: thin;
+	border-right: thin solid #94aad6;
+}
+
+.td_right_thick {
+	border-right-width: thick;
+	border-right: thin solid #94aad6;
+	border-width: 13px;
+}
+
+.Menu_Postion{ left: 10px;  position: absolute;  top: 0px;      }
+.table_title2 {
+	FONT-SIZE: 13px; COLOR: Black; FONT-STYLE: normal; FONT-FAMILY: "Arial, Helvetica, sans-serif"; TEXT-ALIGN: left;
+	font-weight: bold;
+	border-bottom-color: Black;
+	border-bottom-style: inset;
+	border-bottom-width: thin;
+	border-collapse: separate;
+	}
+.Calendar_Bar
+{
+font-size:12px; background-color: Menu; color : black; text-align : left; font-weight : bold;
+font-family: "Arial, Helvetica, sans-serif";
+}
+.oracellcenter {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	text-align: center;
+}
+.oracelldate {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+.oracellnumber {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	text-align: right;
+}
+
+.oracelltext {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+.oracletdone{
+	background-color: White;
+}
+
+.oracletdonewarn {
+	background-color: White;
+   color: Red;
+}
+
+
+.oracletdtwo{
+	BACKGROUND-COLOR: #f1f1f1;
+}
+
+.oracletdtwowarn {
+	background-color: #f1f1f1;
+   color: Red;
+}
+
+
+.oracolumnheader {
+	background-color: Blue;
+	color: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	text-align: center;
+}
+
+.oracolumnnumberheader {
+	BACKGROUND-COLOR: #94aad6;
+	color: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	text-align: right;
+}
+.oracolumncenterheader {
+	BACKGROUND-COLOR: #94aad6;
+	color: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	text-align: center;
+}
+.oracolumndateheader {
+	BACKGROUND-COLOR: #94aad6;
+	color: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	text-align: left;
+}
+
+.oracolumntextheader {
+	BACKGROUND-COLOR: #94aad6;
+	color: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	text-align: left;
+}
+
+.oraheader {
+	background-color: #E0F0FF;
+	color: #336699;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.oraheadersub {
+	background-color: #E0F0FF;
+	color: #336699;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.oraheadersubsub {
+	background-color: #E0F0FF;
+	color: #336699;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: center;
+}
+
+.orarowheader {
+	background-color: White;
+	color: #764803;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	border-bottom-color: #764803;
+	border-bottom-style: inset;
+	border-bottom-width: 3px;
+	border-collapse: separate;
+}
+
+.oraTableCaption {
+	color: #000000;
+	font-family: Arial Black, Helvetica, sans-serif;
+	font-size: 12px;
+	text-align: left;
+}
+
+.oratable {
+	border: 0;
+	cellpadding: 0;
+	cellspacing: 0;
+	width: 100%;
+}
+
+.oratotalnumber {
+	background-color: #C5E3FC;
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	text-align: right;
+}
+
+.oratotaltext {
+	background-color: #C5E3FC;
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.td_bottom {
+	border-bottom: thin solid #94aad6;
+	border-bottom-width: thin;
+}
+
+.td_right_top {
+	border-right: solid #94aad6;
+	border-right-width: thin;
+	border-top: solid #94aad6;
+	border-top-width: thin;
+}
+
+
+.td_right_bottom {
+	border-bottom: thin solid #94aad6;
+	border-bottom-width: thin;
+	border-right: thin solid #94aad6;
+}
+
+
+
+.oratabletitle{
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-size: 10pt;
+}
+
+
+.HeaderFrame{
+	BACKGROUND-COLOR: #426194;
+}
+
+.LeftFrame{
+	
+	background-image:url(../images/bg.gif);
+}
+
+.HalfWindow{
+	BACKGROUND-COLOR: #DABB76;
+
+}
+
+.calendar{
+	background-color: #ffffcc;
+	border-left: 1px Black;
+	border-right-width: 1px;
+	border-right: Black;
+	}
+
+.titlebgcolor {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 15px; FONT-SIZE: 14px; COLOR: #000000; LINE-HEIGHT: 20px; FONT-FAMILY: "宋体"; BACKGROUND-COLOR: #94aad6; TEXT-DECORATION: none
+}
+.menubgcolor {
+	FONT-SIZE: 9pt; COLOR: #ffffff; BACKGROUND-COLOR: #426194; TEXT-DECORATION: none
+}
+
+.mscolor{
+	background-color: #003399;
+}
+
+.mscontentcolor{
+	BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; BORDER-LEFT: #999999 1px solid; BORDER-BOTTOM: #999999 1px solid; BACKGROUND-COLOR: #f1f1f1
+}
+
+.combar{
+	background: #FFFFFF;
+	border-left: 2px outset #999999;
+	border-top: 2px outset #999999;
+	border-bottom: 1px solid Black;
+
+	}
+
+.WebCaption {
+	color: #000000;
+	font-size: 28px;
+	font-style: normal;
+	font-weight: bold;
+	text-align: left;
+}
+
+.promptinfo {
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+}
+.navPoint{font-family: Webdings;font-size:9pt;color:white;cursor:hand;}
+p{
+	font-size:9pt;
+}

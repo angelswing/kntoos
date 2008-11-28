@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <form-beans>
+    <form-bean name="user_F110_RoleMgtForm" type="com.conant.ums.form.F110_RoleMgtForm" />
+    <form-bean name="user_F120_PurvMgtForm" type="com.conant.ums.form.F120_PurvMgtForm" />
+    <form-bean name="user_F130_UserMgtForm" type="com.conant.ums.form.F130_UserMgtForm" />
+    <form-bean name="user_F140_UserLimForm" type="com.conant.ums.form.F140_UserLimForm" />
+    <form-bean name="user_F150_DeptMgtForm" type="com.conant.ums.form.F150_DeptMgtForm" />
+    <form-bean name="user_F160_UserOnlForm" type="com.conant.ums.form.F160_UserOnlForm" />
+    <form-bean name="user_F170_EntityMgtForm" type="com.conant.ums.form.F170_EntityMgtForm" />
+    <form-bean name="user_F180_OperMgtForm" type="com.conant.ums.form.F180_OperMgtForm" />
+  </form-beans>
+  <action-mappings>
+    <action name="user_F110_RoleMgtForm" path="/user/F110_RoleMgtAction" scope="request" type="com.conant.ums.action.F110_RoleMgtAction">
+      <forward name="AddDept" path="/user/user/F110_Down.jsp" />
+      <forward name="AddDeptDone" path="/user/user/F110_Down.jsp?flag=1" />
+      <forward name="InsertDone" path="/user/user/F110_Down.jsp?flag=2" />
+      <forward name="SelectRecord" path="/user/user/F110_Top.jsp" />
+      <forward name="QurCondition" path="/user/user/F110_PopQuery.jsp"></forward>
+    </action>
+    <action name="user_F120_PurvMgtForm" path="/user/F120_PurvMgtAction" scope="request" type="com.conant.ums.action.F120_PurvMgtAction">
+      <forward name="SelectRecord" path="/user/user/F120_Top.jsp" />
+      <forward name="QurCondition" path="/user/user/F120_PopQuery.jsp"></forward>
+    </action>
+    <action name="user_F150_DeptMgtForm" path="/user/F150_DeptMgtAction" scope="request" type="com.conant.ums.action.F150_DeptMgtAction">
+      <forward name="AddDept" path="/user/user/F150_Down.jsp" />
+      <forward name="UpdateDept" path="/user/user/F150_Down.jsp?flag=1" />
+      <forward name="InsertDept" path="/user/user/F150_Down.jsp?flag=2" />
+      <forward name="SelectRecord" path="/user/user/F150_Top.jsp" />
+      <forward name="QurCondition" path="/user/user/F150_PopQuery.jsp"></forward>
+    </action>
+    <action name="user_F130_UserMgtForm" path="/user/F130_UserMgtAction" scope="request" type="com.conant.ums.action.F130_UserMgtAction">
+      <forward name="Qur_top" path="/user/user/F130_top.jsp" />
+      <forward name="Upd_top" path="/user/user/F130_Ftop.jsp" />
+      <forward name="Qur_down" path="/user/user/F130_down.jsp" />
+      <forward name="Insertdown" path="/user/user/F130_down.jsp?tagFlag=1" />
+      <forward name="UpdateUser" path="/user/user/F130_down.jsp?flag=1" />
+      <forward name="InsertUser" path="/user/user/F130_down.jsp?flag=2" />
+      <forward name="result_display" path="/user/com/result.jsp" />
+      <forward name="QurCondition" path="/user/user/F130_select.jsp"></forward>
+    </action>
+    <action name="user_F140_UserLimForm" path="/user/F140_UserLimAction" scope="request" type="com.conant.ums.action.F140_UserLimAction">
+      <forward name="Qur_top" path="/user/user/F140_top.jsp" />
+      <forward name="Qur_down" path="/user/user/F140_down.jsp" />
+      <forward name="Upd_down" path="/user/user/F140_down.jsp?flag=1" />
+      <forward name="result_display" path="/user/com/result.jsp" />
+    </action>
+    <action name="user_F160_UserOnlForm" path="/user/F160_UserOnlAction" scope="request" type="com.conant.ums.action.F160_UserOnlAction">
+      <forward name="Qur_top" path="/user/user/F160_top.jsp" />
+      <forward name="Qur_down" path="/user/user/F160_down.jsp" />
+      <forward name="result_display" path="/user/com/result.jsp" />
+    </action>
+    <action name="user_F170_EntityMgtForm" path="/user/F170_EntityMgtAction" scope="request" type="com.conant.ums.action.F170_EntityMgtAction">
+      <forward name="SelectRecord" path="/user/user/F170_Top.jsp" />
+      <forward name="QurCondition" path="/user/user/F170_PopQuery.jsp"></forward>
+    </action>
+    <action name="user_F180_OperMgtForm" path="/user/F180_OperMgtAction" scope="request" type="com.conant.ums.action.F180_OperMgtAction">
+      <forward name="SelectRecord" path="/user/user/F180_Top.jsp" />
+      <forward name="QurCondition" path="/user/user/F180_PopQuery.jsp"></forward>
+    </action>
+  </action-mappings>
+</struts-config>

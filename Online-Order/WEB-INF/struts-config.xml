@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <form-beans>
+    <form-bean name="BaseForm" type="com.conant.ums.form.BaseForm" />
+    <form-bean name="LoginForm" type="com.conant.ums.form.LoginForm" />
+    <form-bean name="PassForm" type="com.conant.ums.form.PassForm" />
+  </form-beans>
+  <global-forwards>
+    <forward contextRelative="true" name="Result" path="/user/com/result.jsp" />
+    <forward contextRelative="true" name="Exception" path="/user/com/exception.jsp" />
+    <forward contextRelative="true" name="Timeout" path="/user/com/timeout.jsp" />
+    <forward contextRelative="true" name="Index" path="/user/index.jsp" />
+    <forward contextRelative="true" name="Login" path="/user/login.jsp" />
+    <forward contextRelative="true" name="Pass" path="/user/changePass.jsp" />
+    <forward contextRelative="true" name="Default" path="/user/default.html" />
+    <forward contextRelative="true" name="ChangePass" path="/user/com/changePassRusult.jsp" />
+  </global-forwards>
+  <action-mappings>
+    <action name="LoginForm" path="/LoginAction" scope="request" type="com.conant.ums.action.LoginAction" />
+    <action name="BaseForm" path="/LogoutAction" scope="request" type="com.conant.ums.action.LogoutAction" />
+    <action name="PassForm" path="/ChangePassAction" scope="request" type="com.conant.ums.action.ChangePassAction" />
+  </action-mappings>
+</struts-config>

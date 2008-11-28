@@ -1,0 +1,37 @@
+BODY {
+	FONT-SIZE: 12px;background-image:url(../../resources/images/login_bg.gif);; MARGIN: 100px 0px 0px; LINE-HEIGHT: 12pt; FONT-FAMILY: "ËÎÌו"
+}
+TD {
+	FONT-SIZE: 12px; LINE-HEIGHT: 15pt
+}
+INPUT {
+	PADDING-RIGHT: #cccccc 1px solid; PADDING-LEFT:  #cccccc 1px solid; FONT-SIZE: FONT-SIZE: 12px  ; PADDING-BOTTOM:  #cccccc 1px solid; COLOR: #000000; PADDING-TOP: #cccccc 1px solid; TEXT-ALIG:left;
+}
+A:link {
+	COLOR: #01437B; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #01437B; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ffffff; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+
+
+.login_button {
+
+	font-size: 12px;
+	text-align: center;
+	border:0;
+	padding-top: 4px;
+	vertical-align: middle;
+	cursor: hand;
+	height:20px;
+	width:48px;
+	COLOR: midnightblue;
+
+	background-image:url(../images/login_button.gif);
+}
+.temp {
+	FONT-SIZE: 12px; LINE-HEIGHT: 15pt;color:#999999
+}

@@ -1,0 +1,240 @@
+BODY {
+    background-image:url(../images/bg.gif);
+	SCROLLBAR-FACE-COLOR:#f2f2f2; SCROLLBAR-HIGHLIGHT-COLOR:#f0f0f0; SCROLLBAR-SHADOW-COLOR: #666666; SCROLLBAR-3DLIGHT-COLOR:#cccccc; SCROLLBAR-ARROW-COLOR:  #666666; SCROLLBAR-TRACK-COLOR:#f0f0f0; SCROLLBAR-DARKSHADOW-COLOR:#f0f0f0
+}
+A {
+	COLOR: #000000; FONT-FAMILY: '宋体',Arial,Verdana; FONT-SIZE: 9pt; TEXT-DECORATION: none
+}
+A:unknown {
+	COLOR: #000000; FONT-FAMILY: '宋体',Arial,Verdana; FONT-SIZE: 9pt; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #000000; FONT-FAMILY: '宋体',Arial,Verdana; FONT-SIZE: 9pt; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #000000; FONT-FAMILY: '宋体',Arial,Verdana; FONT-SIZE: 9pt; TEXT-DECORATION: none
+}
+A.Menu:hover {
+	COLOR: #000000; FONT-FAMILY: '宋体',Arial,Verdana; FONT-SIZE: 9pt; TEXT-DECORATION: none
+}
+A.Menu:visited {
+	COLOR: #000000; FONT-FAMILY: '宋体',Arial,Verdana; FONT-SIZE: 9pt; TEXT-DECORATION: none
+}
+A.OrderTitle:link {text-decoration:none;color:#000000;}
+A.OrderTitle:visited {text-decoration:none;color:#000000;}
+A.OrderTitle:active {text-decoration:none;color:#000000;}
+A.OrderTitle:hover {text-decoration:none;color:#ffffff;}
+.MainTable {
+	FONT-FAMILY: '宋体',Arial,Verdana; FONT-SIZE: 9pt;
+	}
+.Font {
+	FONT-FAMILY: '宋体',Arial,Verdana; FONT-SIZE: 10pt;
+	}
+.FontTitle {
+	COLOR: #333333;
+	FONT-FAMILY: "??", Tahoma;
+	FONT-SIZE: 9pt;
+	FONT-WEIGHT: normal;
+	font-style: normal;
+}
+.FontDDLinfo {
+	COLOR: #666666; FONT-FAMILY: '宋体',Arial,Verdana; FONT-SIZE: 9pt; FONT-WEIGHT: bold
+}
+.WorkswithTbl {
+	BORDER-BOTTOM: #336699 1px solid; BORDER-LEFT: #336699 1px solid; BORDER-RIGHT: #336699 1px solid; BORDER-TOP: #336699 1px solid
+}
+.boxlook {
+	BORDER-RIGHT: black 1px groove; BORDER-TOP: black 1px groove; FONT-SIZE: 8pt; BORDER-LEFT: black 1px groove; COLOR: black; BORDER-BOTTOM: black 1px groove; FONT-FAMILY: Verdana,Arial; BACKGROUND-COLOR: #cecece;
+}
+.NoChange {
+	BORDER-RIGHT: black 1px groove; BORDER-TOP: black 1px groove; FONT-SIZE: 8pt; BORDER-LEFT: black 1px groove; WIDTH: 235px; COLOR: black; BORDER-BOTTOM: black 1px groove; FONT-FAMILY: Verdana,Arial; BACKGROUND-COLOR: #cecece;
+}
+.CheckBox {
+
+}
+.SelectButton {
+
+}
+.TextBox {
+	font: 9pt "宋体";
+	}
+
+.passwdinput {
+	BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; FONT-SIZE: 8pt; BORDER-LEFT: #999999 1px solid; BORDER-BOTTOM: #999999 1px solid; HEIGHT: 18px
+}
+
+.ClearTextBox {
+	BORDER-TOP-WIDTH: 0px; FONT-WEIGHT: bold; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 8pt; BORDER-BOTTOM-WIDTH: 0px; COLOR: gray; FONT-FAMILY: Verdana,arial; BACKGROUND-COLOR: transparent; BORDER-RIGHT-WIDTH: 0px
+}
+
+.button {
+
+	font-size: 12px;
+	text-align: center;
+	border:0;
+	padding-top: 4px;
+	vertical-align: middle;
+	height:20px;
+	width:52px;
+
+	background-image:url(../images/button.gif);
+}
+.button_upfile {
+
+	HEIGHT: 21px;
+    font-weight : bold;
+	TEXT-DECORATION: none
+
+}
+.list_desc
+{
+	text-align : left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+
+}
+.list_range
+{
+	text-align : left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+}
+.tdright
+{
+font-family: "Arial, Helvetica, sans-serif"; font-size: 12px; text-align: right
+}
+.tablecenter
+{
+text-align: center
+}
+.orarowheader {
+	background-color: White;
+	color: #764803;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	border-bottom-color: #764803;
+	border-bottom-style: inset;
+	border-bottom-width: 3px;
+	border-collapse: separate;
+}
+
+.oracolumncenterheader {
+	BACKGROUND-COLOR: #D5952A;
+	color: #764803;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	text-align: center;
+	background-image:url(../images/bg.jpg)
+}
+.oracletdone{
+	background-color: White;
+}
+.oracletdtwo{
+	BACKGROUND-COLOR: #f1f1f1;
+}
+.Ahreftable{
+}
+.Ahreftable:visited{
+}
+.Ahreftable:hover {
+	BORDER-RIGHT: #999999 1px solid;
+	PADDING-RIGHT: 1px;
+	BORDER-TOP: #999999 1px solid;
+	PADDING-LEFT: 1px;
+	PADDING-BOTTOM: 1px;
+	BORDER-LEFT: #999999 1px solid;
+	PADDING-TOP: 1px;
+	BORDER-BOTTOM: #999999 1px solid;
+	HEIGHT: 20px;
+	BACKGROUND-COLOR: #cccccc;
+	COLOR: #000000;
+	FONT-FAMILY: '宋体',Arial,Verdana;
+	FONT-SIZE: 9pt;
+	TEXT-DECORATION: none
+}
+.TabHead {
+	FONT-STYLE: normal; FONT-FAMILY: "宋体"; FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: #FFFFFF; BACKGROUND-COLOR: #94AAD6;
+}
+.Grid1 {
+	FONT-STYLE: normal; FONT-FAMILY: "宋体"; FONT-WEIGHT: normal; FONT-SIZE: 9pt; COLOR: #000033;
+}
+.Grid2 {
+	FONT-STYLE: normal; FONT-FAMILY: "宋体"; FONT-WEIGHT: normal; FONT-SIZE: 9pt; COLOR: #000033; BACKGROUND-COLOR: #B49350
+}
+.Grid3 {
+	FONT-STYLE: normal; FONT-FAMILY: "宋体"; FONT-WEIGHT: normal; FONT-SIZE: 9pt
+}
+.system { background-color: #FFFFFF;
+	font-family: "宋体";
+	border-top: 2px solid #000000;
+	margin-top: 1px;
+	margin-left: 1px;
+	margin-right: 1px;
+	scrollbar-face-color:#CCCCCC;
+	scrollbar-shadow-color:#FFFFFF;
+	scrollbar-highlight-color:#FFFFFF;
+	scrollbar-3dlight-color:#6B7A92;
+	scrollbar-darkshadow-color:#6B7A92;
+	scrollbar-track-color:#E2E2E2;
+	scrollbar-arrow-color:#000000;
+	}
+
+BODY {
+	font: 9pt "宋体";
+	background-color: #FFFFFF;
+	overflow-y:auto;
+	overflow-x:auto}
+
+.printTable{
+	 cellspacing:1px;
+	  cellpadding:0px;
+	   bgcolor:#000000;
+
+}
+
+.printTr{
+	bgcolor:#FFFFFF;
+}
+
+.printTd{
+	bgcolor:#FFFFFF;
+}
+
+.style1 {
+	font-family: "宋体";
+
+}
+.printStyle{
+	font-family: "宋体";
+	font-size:12px;
+}
+.TabTitle {
+	FONT-STYLE: normal; FONT-FAMILY: "宋体"; FONT-WEIGHT: bold; FONT-SIZE: 11pt;
+}
+
+
+.table-text {
+	font-family: "宋体";
+	font-size:9pt; }
+
+.noframe-framing-table  { background-color: #767776;
+	background-image: none;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	border-top: 1px solid #000000;
+	border-left: 1px solid #000000; }	.FontTitle {
+}
+.MenuBar {
+	font-family: "宋体";
+	font-size:9pt;
+	background-color: #CECFCE;
+	color: #000000;
+ }

@@ -1,0 +1,105 @@
+BODY {
+
+	FONT-SIZE: 12px; 
+	LINE-HEIGHT: 12pt;
+    font-family: "宋体";
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-image:url(../../resources/images/bg.gif);
+	
+	scrollbar-face-color:#8BB7E4;
+scrollbar-highlight-color:#FFFFFF;
+scrollbar-3dlight-color:##D0EDFF;
+scrollbar-darkshadow-color:#000000;
+scrollbar-shadow-color:##D0EDFF;
+scrollbar-arrow-color:#FFFFFF;
+scrollbar-track-color:#E0E0E0;
+}
+
+
+.button {
+
+	font-size: 12px;
+	text-align: center;
+	border:0;
+	padding-top: 4px;
+	vertical-align: middle;
+	cursor: hand;
+	height:22px;
+	width:74px;
+	COLOR: midnightblue;
+
+	background-image:url(../images/button.gif);
+}
+.button_ {
+
+	font-size: 12px;
+	text-align: center;
+	border:0;
+	padding-top: 4px;
+	vertical-align: middle;
+	cursor: hand;
+	height:22px;
+	width:74px;
+	COLOR: midnightblue;
+
+	background-image:url(../images/button_.gif);
+}
+
+
+.date{text-align: left; COLOR: #333333; FONT-FAMILY: "宋体"; FONT-SIZE: 12px; }
+.table1{text-align: left; COLOR: #000000; FONT-FAMILY: "宋体"; FONT-SIZE: 12px; font-weight:bolder;}
+.table2{text-align: center; COLOR: #000000; FONT-FAMILY: "宋体"; FONT-SIZE: 12px; BACKGROUND-COLOR:#D2E7FD;font-weight:bolder; height:23px}
+.table3{text-align: center; COLOR: #000000; FONT-FAMILY: "宋体"; FONT-SIZE: 12px; BACKGROUND-COLOR:#ffffff ;height:23px}
+.table4{text-align: left; COLOR: #000000; FONT-FAMILY: "宋体"; FONT-SIZE: 12px; BACKGROUND-COLOR:#D2E7FD ;height:23px}
+.table5{text-align: center; COLOR: #000000; FONT-FAMILY: "宋体"; FONT-SIZE: 12px; BACKGROUND-COLOR:#EDF8FE ;height:23px}
+.table6{text-align: center; COLOR: #000000; FONT-FAMILY: "宋体"; FONT-SIZE: 12px; BACKGROUND-COLOR:#D2E7FD ;height:23px}
+.table7{text-align: center; COLOR: #000000; FONT-FAMILY: "宋体"; FONT-SIZE: 12px; BACKGROUND-COLOR:#90C1F4 ;height:23px}
+.table8{text-align: left; COLOR: #000000; FONT-FAMILY: "宋体"; FONT-SIZE: 12px; BACKGROUND-COLOR:#EDF8FE ;height:23px}
+.table9{text-align: left; COLOR: #000000; FONT-FAMILY: "宋体"; FONT-SIZE: 12px; BACKGROUND-COLOR:#ffffff ;height:23px}
+.table10{text-align: left; COLOR: #000000; FONT-FAMILY: "宋体"; FONT-SIZE: 12px; ;height:23px}
+.table11{text-align: left; COLOR: #000000; FONT-FAMILY: "宋体"; FONT-SIZE: 12px ;height:35px;font-weight:bolder;}
+.table12{text-align: center; COLOR: #000000; FONT-FAMILY: "宋体"; FONT-SIZE: 12px; BACKGROUND-COLOR:#90C1F4 ;height:24px}
+
+.navPoint {COLOR: #ffffff; CURSOR: hand; FONT-FAMILY: Webdings; FONT-SIZE: 6pt}
+
+.input1{BACKGROUND-COLOR: #F3F5F8; COLOR: #000000; FONT-FAMILY: "宋体"; FONT-SIZE: 12px;BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid }
+.td6{text-align: center; COLOR: #395a7b; FONT-FAMILY: "宋体"; FONT-SIZE: 12px; height: 27px;BACKGROUND-COLOR:#CADAE8;font-weight:bolder;}
+
+.table{text-align: left; COLOR: #000000; FONT-FAMILY: "宋体"; FONT-SIZE: 12px; }
+
+.red{ COLOR: #ff0000; FONT-FAMILY: "宋体"; FONT-SIZE: 12px; }
+
+A:link {
+	COLOR: #000000; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #000000; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ff0000; FONT-SIZE: 12px; TEXT-DECORATION: underline
+}
+
+.title1 {   
+	font-weight: border; 
+	color:#00000;
+	line-height:8mm;
+	font-size:14px;	
+	letter-spacing:12px;
+    text-align:center;
+	font-weight:bolder;
+	filter:shadow(Color=#ffcc00,Direction=130)
+}
+.title2 {   
+	font-weight: border; 
+	color:#00000;
+	line-height:8mm;
+	font-size:12px;	
+	letter-spacing:8px;
+    text-align:left;
+	font-weight:bolder;
+
+}
+.fy{text-align: center; COLOR: #000000; FONT-FAMILY: "宋体"; FONT-SIZE: 12px; height:30px}

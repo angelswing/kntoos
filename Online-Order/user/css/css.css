@@ -1,0 +1,161 @@
+/* The browser agent is IE */
+/* The agent locale is zh */
+/* The agent OS is NT */
+/* The font size multiplier is 1.2 */
+
+/* BANNER PAGE */
+A:link {
+	COLOR: #000000; TEXT-DECORATION: none;  }
+A:visited {
+	COLOR: #000000; TEXT-DECORATION: none;
+}
+A:hover {
+	COLOR: #0000CC; TEXT-DECORATION: underline;
+}
+
+.header {  margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px ; font-family: Arial, Helvetica, sans-serif; border-bottom: 1px solid black; }
+.top-navigation { color: #000000; font-size:84.0%; background-color:#ADB0EC; font-family: '宋体',Arial,Verdana; padding-left: 10px; padding-right: 5px;}
+.top-nav-item  { color: #000000; font-family: Arial,Helvetica,sans-serif; font-weight:bold; text-decoration: none  }
+a.top-nav-item  { color: #000000; font-family: Arial,Helvetica,sans-serif; font-weight:bold;  }
+a:active.top-nav-item  { color: #000000; font-family: sans-serif; }
+a:hover.top-nav-item {  text-decoration: underline}
+
+/* ACCESSIBILITY */.accessibility-jumps-bottom { font-size:50%; color: #FFFFFF; margin-top: 20px; margin-bottom: 0px; }
+.accessibility-jumps-top { font-size:50%; color: #FFFFFF; margin-top: -20px; margin-bottom: 0px; }
+
+.accessibility-jumps-bottom a  { color: #FFFFFF;}
+.accessibility-jumps-top a  { color: #FFFFFF;}
+/* TABS */
+
+.tabs-on { color: #000000; font-size:86.39999999999999%; background-color:#E2E2E2; font-family: '宋体',Arial,Verdana; font-weight:bold;  border-left: 1px solid #000000; border-top: 1px solid #000000; border-right: 1px solid #000000;  padding-left: 8px; padding-right: 8px; padding-top: 5px; padding-bottom: 5px; text-align: center }
+.tabs-off { color: #000000; font-size:84.0%; background-color:#ADACAF; font-family: '宋体',Arial,Verdana; font-weight:bold; border-left: 1px solid #000000; border-top: 1px solid #000000; border-right: 1px solid #000000; border-bottom: 1px solid #000000; padding-left: 8px; padding-right: 8px; padding-top: 5px; padding-bottom: 5px; text-align: center    }
+.tabs-item { color: #000000;  background-color:#ADACAF; font-family: '宋体',Arial,Verdana; font-weight:bold  }
+.blank-tab { background-color:#FFFFFF;  border-bottom: 1px solid #000000;  }
+a:active.tabs-item  { color: #000000 }
+/* FORMS */
+
+FIELDSET { border: 0px }
+INPUT { font-family: sans-serif; font-size:114.0% }
+SELECT {  font-family: sans-serif; font-size:114.0% }
+TEXTAREA { font-size:114.0%; font-family: sans-serif; width: 95%; }
+UL { margin-bottom: 0px; margin-top: 0px; margin-left: 2em; list-style-type: square}
+FORM { margin-bottom:0px; margin-top: 0px; padding-top: 0px; padding-bottom: 0px; }
+/* BUTTONS */
+.buttons  {  font-family: '宋体',Arial,Verdana; font-size:84.0%; margin: 1px 2px 1px 2px; border-top: 1px outset #B1B1B1; border-right: 1px outset #000000; border-bottom: 1px outset #000000; border-left: 1px outset #B1B1B1; background-color:#E2E2E2; }
+.buttons#functions  {  font-weight:normal; font-family: Verdana, sans-serif; font-size:  70%; margin: 1px 1px 1px 1px; border-top: 1px outset #B1B1B1; border-right: 1px outset #000000; border-bottom: 1px outset #000000; border-left: 1px outset #B1B1B1; background-color:#CCCCCC;   }
+.function-button-section { padding-lef: 8px; font-family: '宋体',Arial,Verdana;  text-align: left;  color: #000000; background-color: #E2E2E2; font-weight: normal; }
+.wizard-button-section .buttons#navigation   {  font-family: Verdana, sans-serif; font-size:  70%;  border-top: 1px outset #B1B1B1; border-right: 1px outset #000000; border-bottom: 1px outset #000000; border-left: 1px outset #B1B1B1; background-color:#CCCCCC; margin-top:2px;}
+.buttons#navigation   {  font-family: Verdana, sans-serif; font-size:84.0%;  border-top: 1px outset #B1B1B1; border-right: 1px outset #000000; border-bottom: 1px outset #000000; border-left: 1px outset #B1B1B1; background-color:#E2E2E2; margin-top:2px;}
+.buttons#other {  font-family: '宋体',Arial,Verdana; font-size:114.0%; margin: 2px 2px 0px 2px; border-top: 1px outset #B1B1B1; border-right: 1px outset #000000; border-bottom: 1px outset #000000; border-left: 1px outset #B1B1B1; background-color:#E2E2E2; }
+.buttons#steps {  font-family: '宋体',Arial,Verdana; font-size:114.0%;  margin: 2px 2px -2px 0px; border: 0px solid black; text-decoration:underline; color:#0000FF; background-color:#FFFFFF;}
+.buttons#paging {  font-family: '宋体',Arial,Verdana; font-size:114.0%; margin: 2px 2px -2px 2px; border: 0px outset black; text-decoration:underline; color:#0000FF; background-color: #E2E2E2;}
+.button-section {  padding-left: 0px; font-family: '宋体',Arial,Verdana;  text-align: left; font-weight:normal; color: #000000; background-color:#CCCCCC; background-image: none; }
+
+/*  SYSTEM STATUS AREA  */
+
+.system-tray { background-color: #FFFFFF; font-family: '宋体',Arial,Verdana; border-top: 1px solid #000000; margin-top: 8px; margin-left: 5px; margin-right: 8px; scrollbar-face-color:#CCCCCC; scrollbar-shadow-color:#FFFFFF; scrollbar-highlight-color:#FFFFFF; scrollbar-3dlight-color:#6B7A92; scrollbar-darkshadow-color:#6B7A92; scrollbar-track-color:#E2E2E2; scrollbar-arrow-color:#6B7A92 }
+
+.tray-text {   font-family: '宋体',Arial,Verdana; font-size:84.0%; background-color:#E2E2E2; color: #000000;  }
+.was-message-item  { color: #000000; font-family: Arial,Helvetica,sans-serif; font-weight:bold; font-size:84.0%; background-color:#E2E2E2; }
+.was-message-item a { font-weight: normal }/* TABLES */
+
+.table-text {   font-family: '宋体',Arial,Verdana; font-size:84.0%; background-color: #F7F7F7; background-image: none; }
+.table-text#running { color: green; font-family: '宋体',Arial,Verdana; font-size:84.0%; background-color: #F7F7F7; background-image: none; }
+.table-text#stopped { color: black; font-family: '宋体',Arial,Verdana; font-size:84.0%; background-color: #F7F7F7; background-image: none; }
+.table-text#problems { color: red; font-family: '宋体',Arial,Verdana; font-size:84.0%; background-color: #F7F7F7; background-image: none; }
+.table-text#unknown { color: orange; font-family: '宋体',Arial,Verdana; font-size:84.0%; background-color: #F7F7F7; background-image: none; }
+.column-head {  padding-left: .35em; font-family: '宋体',Arial,Verdana; font-size: 92.39999999999999%; font-weight:bold; text-align: left; color: #FFFFFF; background-color: #8691C7; background-image: none; }
+.column-head-name {  padding-left: .35em; font-family: '宋体',Arial,Verdana; font-size:84.0%;font-weight:bold; text-align: left; color: #000000; background-color: #BBCEDB; background-image: none; }
+.column-head-prefs {  padding-left: .35em; font-family: '宋体',Arial,Verdana; font-size:84.0%; font-weight:bold; text-align: left; color: #FFFFFF; background-color:#6B7A92; background-image: none; }
+
+.framing-table { background-color: #767776; background-image: none; }
+.noframe-framing-table  { background-color: #767776; background-image: none; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-top: 1px solid #000000; border-left: 1px solid #000000; }
+
+.layout-manager {  background-color:#E2E2E2; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000;}
+.layout-manager#notabs {  background-color:#E2E2E2; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-top: 1px solid #000000;}
+.highlighted { background-color: #FFFFCC  }
+.not-highlighted { background-color: #FFFFFF  }
+.description-text { padding-left: 5px; font-family: '宋体',Arial,Verdana; font-size:84.0%; background-color: #FFFFFF}
+.instruction-text { padding-left: 5px; font-family: Arial, Helvetica, sans-serif; font-size:84.0%; background-color: #FFFFFF}
+.information {  font-family: Arial, Helvetica, sans-serif; font-size:84.0%; color:#993300;}
+.paging-text { font-size: 85.2%}
+.runtime-checkbox { font-size:84.0%; font-family: '宋体',Arial,Verdana;  text-align: left; font-weight:normal; color: #000000; background-color:#CCCCCC; }.find-filter {  font-family: '宋体',Arial,Verdana; font-size: 85.2%; color: #000000; background-color: #E2E2E2;  margin-left: 3px;  }
+.find-filter-expanded {   font-family: '宋体',Arial,Verdana; font-size: 85.2%; color: #000000; background-color: #E2E2E2;  padding-left: 20px; padding-bottom: 0px }
+.find-filter-text {   font-family: '宋体',Arial,Verdana; font-size: 85.2%; color: #000000; background-color: #E2E2E2; }
+.collection-total {   font-family: '宋体',Arial,Verdana; font-size: 85.2%; color: #000000; background-color: #E2E2E2;  }
+.collection-total-expanded {   padding-left: 40px; font-family: '宋体',Arial,Verdana; font-size: 85.2%; color: #000000; background-color: #E2E2E2;  }
+.complex-property { font-family: '宋体',Arial,Verdana; font-size:84.0%; padding-left: 30px; background-color: #F7F7F7; }
+/*  BODY STYLES */
+
+a {color:#0000FF }
+a:active {color:#666666 }
+#plusminus {text-decoration: none; color: #000000; }
+
+.content {   background-color: #FFFFFF ; font-family: Arial, Helvetica, sans-serif; scrollbar-face-color:#CCCCCC; scrollbar-shadow-color:#FFFFFF; scrollbar-highlight-color:#FFFFFF; scrollbar-3dlight-color:#6B7A92; scrollbar-darkshadow-color:#6B7A92; scrollbar-track-color:#E2E2E2; scrollbar-arrow-color:#6B7A92 }
+.topology-view {  padding-top: 5px;  font-family: Arial, Helvetica, sans-serif; font-size:84.0%; background-color: #FFFFFF}
+.topology-view H1#bread-crumb{  font-family: Arial, Helvetica, sans-serif; font-size: 130%; background-color: #FFFFFF ; letter-spacing: -.03em;  margin-top: .75em; margin-bottom: -.25em;}
+.topology-view p.instruction-text{  padding-left:.5em; font-family: Arial, Helvetica, sans-serif; font-size: 100%; background-color: #FFFFFF}
+/*.navtree {  font-family: Arial, Helvetica, sans-serif;  margin-top: 0px; scrollbar-face-color:#CCCCCC; scrollbar-shadow-color:#FFFFFF; scrollbar-highlight-color:#FFFFFF; scrollbar-3dlight-color:#6B7A92; scrollbar-darkshadow-color:#6B7A92; scrollbar-track-color:#E2E2E2; scrollbar-arrow-color:#6B7A92 }*/
+.navtree div {  font-family: Arial, Helvetica, sans-serif; font-size:84.0%; }
+.Item0  { margin-top: 7px; margin-bottom: 2px; font-weight: bold; }
+.Item0 a { margin-top: 7px; margin-bottom: 2px; font-weight: normal; }
+.navtree-items {  font-family:  '宋体',Arial,Verdana; font-size:84.0% }
+.task-item {font-size: 110%; color: #000000;}
+/* WIZARDS */th.wizard-step  { font-weight:bold; background-color:#E2E2E2; font-family: '宋体',Arial,Verdana;  font-size: 85.2%; text-align: left;  color: #000000; }
+.wizard-step  {  background-color:#FFFFFF; font-family: '宋体',Arial,Verdana;  font-size: 85.2%; text-align: left;  color: #000000;}
+.wizard-step-text { background-color:#E2E2E2; font-family: '宋体',Arial,Verdana;  font-size: 85.2%; text-align: left;  color: #000000;  }
+.wizard-button-section {  font-family: '宋体',Arial,Verdana;  text-align: left; font-weight:normal; color: #000000; background-color:#E2E2E2;  }
+.wizard-step-expanded {    background-color:#E2E2E2; padding-left: 20px; font-family: '宋体',Arial,Verdana;  font-size: 85.2%; text-align: left;  color: #000000;  }
+.wizard-table {  background-color:#E2E2E2; border-top: 1px solid #000000; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000;}
+/*  TITLES  */H1 { font-family: '宋体',Arial,Verdana; font-size:114.0%; ; margin-left: 5px }
+H1#bread-crumb { font-family: '宋体',Arial,Verdana; font-size:114.0%;   margin-top: .75em; margin-bottom: -.25em; }
+H3#bread-crumb { font-family: '宋体',Arial,Verdana; font-size:84.0%; margin-top: .5em;  margin-bottom: -.5em }
+
+/* HELP PAGES */
+
+.help {   margin: 0px; background-color: #FFFFFF ; font-family: Arial, Helvetica, sans-serif }
+.index-link { font-family: Arial, Helvetica, sans-serif; font-size: 90.0%; text-align: right; padding-top: 10px; padding-right: 10px; }/* TREES */
+
+#Item0 { font-weight: bold; padding-top: 5px}
+
+.indent1 { padding-left:0px;    FONT-SIZE: 9px; font-family: '宋体',Arial,Verdana; margin-top: 5px; margin-bottom: 5px  }
+.indent2 { padding-left:10px;   FONT-SIZE: 9px; font-family: '宋体',Arial,Verdana; margin-top: 5px; margin-bottom: 5px  }
+.indent3 { padding-left:20px;   FONT-SIZE: 9px; font-family: '宋体',Arial,Verdana; margin-top: 5px; margin-bottom: 5px   }
+.indent4 { padding-left:38px;   FONT-SIZE: 9px; font-family: '宋体',Arial,Verdana; margin-top: 5px; margin-bottom: 5px  }
+.indent5 { padding-left:57px;   FONT-SIZE: 9px; font-family: '宋体',Arial,Verdana; margin-top: 5px; margin-bottom: 5px   }
+.indent6 { padding-left:76px;   FONT-SIZE: 9px; font-family: '宋体',Arial,Verdana; margin-top: 5px; margin-bottom: 5px   }
+.indent7 { padding-left:95px;  FONT-SIZE: 9px; font-family: '宋体',Arial,Verdana; margin-top: 5px; margin-bottom: 5px    }
+.indent8 { padding-left:114px;  FONT-SIZE: 9px; font-family: '宋体',Arial,Verdana; margin-top: 5px; margin-bottom: 5px    }
+.indent9 { padding-left:133px;  FONT-SIZE: 9px; font-family: '宋体',Arial,Verdana; margin-top: 5px; margin-bottom: 5px   }
+.indent10 {padding-left:152px;  FONT-SIZE: 9px; font-family: '宋体',Arial,Verdana; margin-top: 5px; margin-bottom: 5px   }
+.indent1kids {   padding-left:-19px; FONT-WEIGHT: bold; font-family: '宋体',Arial,Verdana; margin-top: 10px; margin-bottom: 4px; font-weight: bold  }
+.indent2kids {   padding-left:0px;   FONT-WEIGHT: bold; font-family: '宋体',Arial,Verdana; margin-top: 5px; margin-bottom: 5px  }
+.indent3kids {   padding-left:19px;  FONT-WEIGHT: bold; font-family: '宋体',Arial,Verdana; margin-top: 5px; margin-bottom: 5px   }
+.indent4kids {   padding-left:37px;  FONT-WEIGHT: bold; font-family: '宋体',Arial,Verdana; margin-top: 5px; margin-bottom: 5px  }
+.indent5kids {   padding-left:56px;  FONT-WEIGHT: bold; font-family: '宋体',Arial,Verdana; margin-top: 5px; margin-bottom: 5px   }
+.indent6kids {   padding-left:75px;  FONT-WEIGHT: bold; font-family: '宋体',Arial,Verdana; margin-top: 5px; margin-bottom: 5px   }
+.indent7kids {   padding-left:94px;  FONT-WEIGHT: bold; font-family: '宋体',Arial,Verdana; margin-top: 5px; margin-bottom: 5px   }
+.indent8kids {   padding-left:113px; FONT-WEIGHT: bold; font-family: '宋体',Arial,Verdana; margin-top: 5px; margin-bottom: 5px   }
+.indent9kids {   padding-left:132px; FONT-WEIGHT: bold; font-family: '宋体',Arial,Verdana; margin-top: 5px; margin-bottom: 5px   }
+.indent10kids {   padding-left:151px;FONT-WEIGHT: bold; font-family: '宋体',Arial,Verdana; margin-top: 5px; margin-bottom: 5px   }
+
+/* VALIDATION ERRORS */
+
+.validation-error {color: #CC0000; font-family: '宋体',Arial,Verdana;  }
+.validation-warn-info {color: #000000; font-family: '宋体',Arial,Verdana;  }
+.validation-header { color: #FFFFFF; background-color:#6B7A92; font-family: '宋体',Arial,Verdana;font-weight:bold; font-size: 90.0% }
+/* HOMEPAGE STYLES */
+.nolines {  font-size: 90.0%; borders: 0px solid #CCCCFF;  }
+.linesmost { font-size: 90.0%;   border-left: 0px; border-bottom: 0px; border-top: 1px solid #CCCCFF; border-right: 1px solid #CCCCFF;  background-color: #FFFFFF; padding-bottom: 12px}
+.purpletext { font-family: sans-serif; color: #9933CC; font-size: 124.8%;}
+.purplebold { font-weight: bold; color: #9933CC; font-size: 115%; font-family: Helvetica,sans-serif;}
+.graytext { font-family: sans-serif; color: #666666; font-size: 124.8%;}
+.graybold { font-weight: bold; color: #363636; font-size: 128.4%; font-family: Helvetica,sans-serif;}
+.desctextabout { font-family: sans-serif; color: #363636; font-size: 101%; padding-bottom: 5px; line-height: 160%}
+.desctexthead { font-weight: 600; font-family: sans-serif; color: #333333; font-size: 124.8%; padding-bottom: 5px; line-height: 155%}
+.desctext { font-family: sans-serif; color: #666666; font-size: 120.0%; line-height: 130%}
+.bluebold { font-weight: bold; color: #330066; font-size: 128.4%; font-family: Helvetica,sans-serif;}
+a .purpletext { text-decoration: underline #000000}
+a .purplebold { text-decoration: underline  #000000}
+a .bluebold  {  text-decoration: underline  #000000}
+a .graybold  {  text-decoration: underline  #000000}

@@ -1,0 +1,268 @@
+a
+{
+	FONT-SIZE:10pt;
+	color:red;
+	FONT-FAMILY: "Verdana", "宋体";
+	TEXT-DECORATION: none;
+}
+
+a:hover
+{
+	FONT-SIZE:10pt;
+	color:red;
+	FONT-FAMILY: "Verdana", "宋体";
+	TEXT-DECORATION: underline;
+}
+
+
+.copyright
+{
+    BACKGROUND-COLOR:Silver;
+    COLOR: #666666;
+     LINE-HEIGHT: 18px;
+    FONT-FAMILY:  "Verdana","宋体";
+    FONT-SIZE: 10px;
+    TEXT-DECORATION: none
+}
+
+.Title
+{
+    COLOR: DarkGreen;
+    FONT-FAMILY: "Verdana", "宋体";
+    FONT-SIZE: 13pt;
+    FONT-WEIGHT: bolder;
+}
+
+.BTitle
+	{
+	    FONT-FAMILY: Verdana,宋体  ;
+	    FONT-SIZE: 10pt;
+	    color:Black;
+	}
+.YTitle
+	{
+	COLOR: Yellow;
+	FONT-FAMILY: Verdana,宋体  ;
+	FONT-SIZE: 11pt;
+	}
+.BlueTitle
+{
+    COLOR: DarkBlue;
+    FONT-FAMILY: "Verdana", "宋体";
+    FONT-SIZE: 13pt;
+    FONT-WEIGHT: bolder;
+}
+Input
+{
+    COLOR: Black;
+    FONT-FAMILY: "Verdana", "宋体";
+    FONT-SIZE: 10pt;
+}
+
+.txt
+	{
+	    FONT-FAMILY: Verdana,宋体  ;
+	    FONT-SIZE: 10pt;
+	    color:black;
+	}
+
+.Stxt
+	{
+	FONT-FAMILY: webdings;
+	FONT-SIZE: 13pt;
+	color:red;
+	}
+.BlueTxtNormal
+{
+    COLOR: DarkBlue;
+    FONT-FAMILY: "Verdana", "宋体";
+    FONT-SIZE: 11pt;
+}
+.BlueTxtBold
+{
+    COLOR: DarkBlue;
+    FONT-FAMILY: "Verdana", "宋体";
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bolder;
+}
+.PurpleTxtNormal
+	{
+	COLOR: Purple;
+	FONT-FAMILY: Verdana, 宋体;
+	FONT-SIZE: 10pt;
+	}
+.GreenTxtBold
+{
+    COLOR: DarkGreen;
+    FONT-FAMILY: "Verdana", "宋体";
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bolder;
+}
+.RedTxtBold
+	{
+	COLOR: Red;
+	FONT-FAMILY: Verdana, 宋体;
+	FONT-SIZE: 10pt;
+	FONT-WEIGHT: bolder;
+	}
+hr
+	{
+	COLOR:Green;
+	}
+
+.TBTitle
+	{
+	BACKGROUND-COLOR: #0066CC;
+	COLOR:White;FONT-FAMILY: Verdana,宋体 ,  Arial;
+	 FONT-SIZE: 10pt;
+	}
+.TBbg1
+	{ BACKGROUND-COLOR: #CCCCFF;COLOR:Darkgreen;
+	FONT-FAMILY: Verdana,宋体 ,  Arial;
+	FONT-SIZE: 10pt;
+	}
+.TBbg2
+	{
+	BACKGROUND-COLOR: lightyellow;COLOR:Darkgreen;
+	FONT-FAMILY: Verdana,宋体 ,  Arial;
+	 FONT-SIZE: 10pt;
+	 }
+.TBbg3
+	{
+	BACKGROUND-COLOR: #0066CC;COLOR:white;
+	FONT-FAMILY: Verdana,宋体 ,  Arial;
+	 FONT-SIZE: 10pt;
+	 }
+.TBbg4
+	{
+	BACKGROUND-COLOR: #009900;COLOR:white;
+	FONT-FAMILY: Verdana,宋体 ,  Arial;
+	 FONT-SIZE: 10pt;
+	 }
+.TBbg6
+	{
+	BACKGROUND-COLOR: #F2F2F2;COLOR:black;
+	FONT-FAMILY: Verdana,宋体 ,  Arial;
+	 FONT-SIZE: 10pt;
+	 }
+.TBbg8
+	{ BACKGROUND-COLOR: #CCCCFF;COLOR:Black;
+	FONT-FAMILY: Verdana,宋体 ,  Arial;
+	FONT-SIZE: 10pt;
+	}
+.TBbg9
+	{ BACKGROUND-COLOR: #F2F2F2;COLOR:#8000FF;
+	FONT-FAMILY: Verdana, 宋体, Arial;
+	FONT-SIZE: 10pt;
+	}
+.TBbg10
+	{ BACKGROUND-COLOR: #CCCCFF;COLOR:#000080;
+	FONT-FAMILY: Verdana,宋体 ,  Arial;
+	FONT-SIZE: 13pt;
+	FONT-WEIGHT: bolder;
+	}
+.TBbg11
+	{ BACKGROUND-COLOR: #F8F9C8;COLOR:#8000FF;
+	FONT-FAMILY: Verdana,宋体 ,  Arial;
+	FONT-SIZE: 10pt;
+	}
+.TBbg12
+	{ BACKGROUND-COLOR: #F8F9C8;COLOR:black;
+	FONT-FAMILY: Verdana,宋体 ,  Arial;
+	FONT-SIZE: 10pt;
+	}.Rtxt
+	{
+	COLOR: Red;
+	FONT-FAMILY: Verdana,宋体  ;
+	FONT-SIZE: 10pt;
+	}
+.TBbg13
+	{ BACKGROUND-COLOR: #F2F2F2;COLOR:black;
+	FONT-FAMILY: 宋体,Verdana,  Arial;
+	FONT-SIZE: 10pt;
+	}
+.TBbg14
+	{ BACKGROUND-COLOR: #E1FFD2;COLOR:black;
+	FONT-FAMILY: Verdana,宋体, Arial;
+	FONT-SIZE: 10pt;
+	}
+.BigPtxt
+	{
+	COLOR: #800080;
+	FONT-FAMILY: Verdana,宋体  ;
+	FONT-SIZE: 11pt;
+	FONT-WEIGHT: bolder;
+	}
+.SmallWtxt
+	{
+	COLOR: White;
+	FONT-FAMILY: Verdana,宋体  ;
+	FONT-SIZE: 7pt;
+	}
+
+<!-- tabpage按钮 -->
+.active_tab{
+  background-color: #94AAD6;
+  color: black;
+  font-size: 9pt;
+  cursor: hand;
+  border-width: 0 ;
+  border-left: 1 solid #808080;
+  border-right: 2 solid #808080;
+  border-top: 2 solid #808080;
+}
+
+<!-- tabpage按钮 -->
+.normal_tab{
+  background-color: #CECFCE;
+  color: black;
+  border-width: 0 ;
+  font-size: 9pt;
+  cursor: hand;
+  border-left: 1 solid #808080;
+  border-top: 1 solid #808080;
+  border-bottom: 1 solid #808080;
+}
+
+<!-- tabpage外观 -->
+DIV.tabpage{
+  height:100%;
+  width:100%;
+  font-size: 9pt;
+  border-width: 0;
+  background-color: #CECFCE;
+  display:none;
+  border-left: 1 solid #808080;
+  border-right: 1 solid #808080;
+  border-bottom: 1 solid #808080;
+}
+
+
+<!-- tabpage按钮区背景色 -->
+TABLE.tabpage{
+  font-size: 10pt;
+  background-color: #CCCCFF;
+}
+
+
+<!-- tabpage外面FORM物件的属性 -->
+FORM.tabform{
+  height: 85%;
+}
+
+<!-- 显示(唯读)栏位 -->
+INPUT.display{
+  font-size: 10pt;
+  border-style: solid;
+  border-width: 0;
+  background-color : #EEEEEE;
+}
+
+<!-- Table的外框与背景色 -->
+.datatable{
+  background-color : #EEEEEE;
+  border:medium double steelblue;
+  font-size: 11pt;
+  line-height: 100%;
+  padding: 3pt;
+}

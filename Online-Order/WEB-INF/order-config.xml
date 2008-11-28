@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<description>Online-Order Spring Configuration</description>
+
+	<bean id="SimpleUrlMap_ord"
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping"
+		singleton="true" lazy-init="default" autowire="default"
+		dependency-check="default">
+		<property name="mappings">
+			<props>
+
+				<!--comm management-->
+				<prop key="/welcome.ord">commController</prop>
+				<prop key="/login.ord">loginController</prop>
+				<prop key="/menu.ord">functionController</prop>
+
+				<prop key="/addLensOrder.ord">addLensOrderController</prop>
+				<prop key="/modifyLensOrder.ord">modifyLensOrderController</prop>
+				<prop key="/listOrders.ord">listOrdersController</prop>
+				<prop key="/viewOrder.ord">viewOrderController</prop>
+				<prop key="/queryOrders.ord">queryOrdersController</prop>
+				<prop key="/deleteOrders.ord">deleteOrdersController</prop>
+			</props>
+		</property>
+	</bean>
+	<!-- modify by Martin begin-->
+
+	<bean id="functionDao" class="com.conant.order.dao.hibernate.FunctionDaoIMP">
+		<property name="template">
+			<ref bean="hibernateTemplate" />
+		</property>
+	</bean>
+
+	<bean id="commController" class="com.conant.order.common.CommController"
+		singleton="true" lazy-init="default" autowire="default"
+		dependency-check="default">
+		<property name="functionDao">
+			<ref bean="functionDao" />
+		</property>
+	</bean>
+
+	<bean id="functionController" class="com.conant.order.web.controller.FunctionController"
+		singleton="true" lazy-init="default" autowire="default"
+		dependency-check="default">
+		<property name="functionDao">
+			<ref bean="functionDao" />
+		</property>
+	</bean>
+
+	<bean id="loginController" class="com.conant.order.web.controller.LoginController"
+		singleton="true" lazy-init="default" autowire="default"
+		dependency-check="default">
+		<property name="formView">
+			<value>login</value>
+		</property>
+		<property name="successView">
+			<value>ord_frame</value>
+		</property>
+	</bean>
+
+	<!-- modify by Martin end -->
+
+	<!-- modify by agang begin-->
+
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basename" value="messages"/>
+	</bean>
+
+	<bean id="addLensOrderController" class="com.conant.order.web.controller.AddLensOrderController">
+		<property name="orderDao" ref="orderDao" />
+		<property name="lensModelDao" ref="lensModelDao" />
+		<property name="commandName" value="lensOrderForm" />
+		<property name="formView" value="EditLensOrderForm" />
+		<property name="successView" value="common/ok" />
+		<property name="validator" ref="lensOrderValidator" />
+	</bean>
+
+	<bean id="modifyLensOrderController"
+		class="com.conant.order.web.controller.ModifyLensOrderController">
+		<property name="orderDao" ref="orderDao" />
+		<property name="lensModelDao" ref="lensModelDao" />
+		<property name="commandName" value="lensOrderForm" />
+		<property name="formView" value="EditLensOrderForm" />
+		<property name="successView" value="common/ok" />
+		<property name="validator" ref="lensOrderValidator" />
+	</bean>
+
+	<bean id="listOrdersController" class="com.conant.order.web.controller.ListOrdersController">
+		<property name="orderDao" ref="orderDao" />
+	</bean>
+
+	<bean id="viewOrderController" class="com.conant.order.web.controller.ViewOrderController">
+		<property name="orderDao" ref="orderDao" />
+	</bean>
+
+	<bean id="queryOrdersController" class="com.conant.order.web.controller.QueryOrdersController">
+		<property name="orderDao" ref="orderDao" />
+		<property name="formView" value="QueryOrders" />
+		<property name="successView" value="QueryOrders" />
+		<property name="pageSize" value="20" />
+	</bean>
+
+	<bean id="deleteOrdersController" class="com.conant.order.web.controller.DeleteOrdersController">
+		<property name="orderDao" ref="orderDao" />
+		<property name="formView" value="QueryOrders" />
+		<property name="successView" value="common/ok" />
+	</bean>
+
+	<bean id="lensOrderValidator" class="com.conant.order.web.form.LensOrderValidator" />
+
+	<bean id="orderDao" class="com.conant.order.dao.hibernate.OrderDaoImpl">
+		<property name="template">
+			<ref bean="hibernateTemplate" />
+		</property>
+	</bean>
+
+	<bean id="lensModelDao" class="com.conant.order.dao.hibernate.LensModelDaoImpl">
+		<property name="template">
+			<ref bean="hibernateTemplate" />
+		</property>
+	</bean>
+
+	<!-- modify by agang end -->
+
+
+</beans>
+
