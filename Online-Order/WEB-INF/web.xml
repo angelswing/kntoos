@@ -4,40 +4,6 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_5.xsd">
 	<display-name>Online-Order</display-name>
 
-	<!--
-		- Key of the system property that should specify the root directory of
-		this - web app. Applied by WebAppRootListener or Log4jConfigListener.
-	-->
-	<context-param>
-		<param-name>webAppRootKey</param-name>
-		<param-value>onlineorder.root</param-value>
-	</context-param>
-
-	<!--
-		- Location of the Log4J config file, for initialization and refresh
-		checks. - Applied by Log4jConfigListener.
-	-->
-	<context-param>
-		<param-name>log4jConfigLocation</param-name>
-		<param-value>/WEB-INF/log4j.properties</param-value>
-	</context-param>
-	
-	<!--
-		- Configures Log4J for this web app.
-		- As this context specifies a context-param "log4jConfigLocation", its file path
-		- is used to load the Log4J configuration, including periodic refresh checks.
-		-
-		- Would fall back to default Log4J initialization (non-refreshing) if no special
-		- context-params are given.
-		-
-		- Exports a "web app root key", i.e. a system property that specifies the root
-		- directory of this web app, for usage in log file paths.
-	-->
-	<!-- Leave the listener commented-out if using JBoss -->
-	<listener>
-		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
-	</listener>
-
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>WEB-INF/order-data.xml,/WEB-INF/order-config.xml
@@ -87,7 +53,6 @@
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 
-
 	<servlet>
 		<servlet-name>action</servlet-name>
 		<servlet-class>org.apache.struts.action.ActionServlet
@@ -112,7 +77,6 @@
 		<servlet-name>action</servlet-name>
 		<url-pattern>*.do</url-pattern>
 	</servlet-mapping>
-
 
 	<servlet-mapping>
 		<servlet-name>ord</servlet-name>
