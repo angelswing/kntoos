@@ -1,0 +1,8 @@
+*.jar
+*.class
+*.ini
+*.db
+*.bak
+*.scc
+build
+dependLib
