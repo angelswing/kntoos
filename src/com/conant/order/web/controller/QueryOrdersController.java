@@ -31,12 +31,12 @@ import com.conant.order.web.form.OrderTypeEditor;
 
 /**
  * @author Administrator
- *
+ * 
  */
 public class QueryOrdersController extends SimpleFormController
 {
-	private static final Logger log = Logger.getLogger(
-			"QueryOrdersController", Logger.DEBUG, true);
+	private static final Logger log = Logger.getLogger("QueryOrdersController",
+			Logger.DEBUG, true);
 	private OrderDao orderDao;
 	private int pageSize;
 
@@ -55,12 +55,12 @@ public class QueryOrdersController extends SimpleFormController
 	{
 		this.orderDao = orderDao;
 	}
-	
+
 	public int getPageSize()
 	{
 		return pageSize;
 	}
-	
+
 	public void setPageSize(int pageSize)
 	{
 		this.pageSize = pageSize;
@@ -73,12 +73,60 @@ public class QueryOrdersController extends SimpleFormController
 		return new OrderQuerier();
 	}
 
+	private Map prepareControlModel(HttpServletRequest request,
+			Map controlModel, OrderQuerier orderQuerier) throws Exception
+	{
+		Map<Object, Object> model = (controlModel != null) ? controlModel
+				: new HashMap<Object, Object>();
+		OrderQuerier querier = (orderQuerier != null) ? orderQuerier
+				: new OrderQuerier();
+
+		int pageId = 0;
+		int pageCount = 0;
+		if(StringUtils.hasText(request.getParameter("pageId")))
+		{
+			pageId = Integer.parseInt(request.getParameter("pageId"));
+		}
+		querier.setStartIndex(pageId * pageSize);
+		querier.setPageSize(pageSize);
+		try
+		{
+			QuerierResult result = orderDao.getOrders(querier);
+			if(result != null && result.getTotalCount() >= 0)
+			{
+				if(pageSize > result.getTotalCount())
+				{
+					pageCount = 1;
+				}
+				else
+				{
+					pageCount = result.getTotalCount() / pageSize;
+					if(result.getTotalCount() % pageSize != 0)
+					{
+						pageCount++;
+					}
+				}
+			}
+			model.put("pageId", String.valueOf(pageId));
+			model.put("pageSize", String.valueOf(pageSize));
+			model.put("pageCount", String.valueOf(pageCount));
+			model.put("totalCount", String.valueOf(result.getTotalCount()));
+			model.put("result", result.getVoList());
+
+			return model;
+		}
+		catch(Exception e)
+		{
+			throw e;
+		}
+	}
+
 	protected Map referenceData(HttpServletRequest request) throws Exception
 	{
 		log.info("QueryOrdersController referenceData...");
-		
+
 		Map<Object, Object> model = new HashMap<Object, Object>();
-		
+
 		List<String> orderstatusList = new ArrayList<String>();
 		orderstatusList.add("--Please Select--");
 		orderstatusList.add("create");
@@ -93,15 +141,53 @@ public class QueryOrdersController extends SimpleFormController
 		ordertypeList.add("Frame And Lens");
 		model.put("orderstatusList", orderstatusList);
 		model.put("ordertypeList", ordertypeList);
-		
+		prepareControlModel(request, model, null);
+
 		return model;
 	}
 
-	protected void initBinder(HttpServletRequest request, ServletRequestDataBinder binder) throws Exception
+	protected void initBinder(HttpServletRequest request,
+			ServletRequestDataBinder binder) throws Exception
 	{
 		log.info("QueryOrdersController initBinder...");
 		super.initBinder(request, binder);
-		binder.registerCustomEditor(Integer.class, "orderstatus", new OrderStatusEditor(true));
-		binder.registerCustomEditor(Integer.class, "ordertype", new OrderTypeEditor(true));
+		binder.registerCustomEditor(Integer.class, "orderstatus",
+				new OrderStatusEditor(true));
+		binder.registerCustomEditor(Integer.class, "ordertype",
+				new OrderTypeEditor(true));
+	}
+
+	@Override
+	protected ModelAndView onSubmit(HttpServletRequest request,
+			HttpServletResponse response, Object command, BindException errors)
+			throws Exception
+	{
+
+		log.info("QueryOrdersController onSubmit...");
+		OrderQuerier querier = (OrderQuerier) command;
+
+		PageMsg pageMsg = new PageMsg();
+
+		try
+		{
+			log.info("QueryOrdersController start rendering...");
+
+			Map model = referenceData(request);
+			prepareControlModel(request, model, querier);
+
+			return showForm(request, errors, this.getSuccessView(), model);
+		}
+		catch(ProcessException pe)
+		{
+			pageMsg.setMsg("Failed to query orders!");
+			pageMsg.setUrl("/queryOrders.ord");
+			return new ModelAndView("common/err", "error", pageMsg);
+		}
+		catch(Exception ex)
+		{
+			pageMsg.setMsg(ex.getMessage());
+			pageMsg.setUrl("/queryOrders.ord");
+			return new ModelAndView("common/err", "error", pageMsg);
+		}
 	}
 }
