@@ -34,7 +34,7 @@ body {
 <html:form method="POST" action="/LoginAction.do" onsubmit=" return checkForm(); ">
  <table width="1020" height="388" border="0" cellpadding="4" cellspacing="0">
    <tr>
-     <td background="images/user.jpg"><table border=0 cellpadding=0 cellspacing=0 width="80%" valign="middle" align="center">
+     <td background="images/user.jpg"><table border=0 cellpadding=0 cellspacing=0 width="80%" valign="absmiddle" align="center">
        <tr height="28%">
          <td height="130">&nbsp;</td>
        </tr>

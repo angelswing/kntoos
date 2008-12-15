@@ -124,15 +124,15 @@
           <td align="left" width="18%" height="18">&nbsp;</td>
           <td align="left" width="60%" height="8">&nbsp;</td>
         </tr>
-        <tr valign="middle" class="Grid1">
+        <tr valign="absmiddle" class="Grid1">
           <td align="left" width="18%" height="18">&nbsp;&nbsp;&nbsp;&nbsp;实体父节点</td>
           <td align="left" width="60%" height="8"><input type="text" name="user_id" maxlength="30" size="30" class="TextBox" value="" /></td>
         </tr>
-        <tr valign="middle" class="Grid1">
+        <tr valign="absmiddle" class="Grid1">
           <td align="left" height="18">&nbsp;&nbsp;&nbsp;&nbsp;实体名称</td>
           <td align="left"><input type="text" name="user_id" maxlength="30" size="30" class="TextBox" value="" /></td>
         </tr>
-        <tr valign="middle" class="Grid1">
+        <tr valign="absmiddle" class="Grid1">
           <td align="left" height="18">&nbsp;&nbsp;&nbsp;&nbsp;实体编号</td>
           <td align="left"><input type="text" name="user_id" maxlength="30" size="30" class="TextBox" value="" /></td>
         </tr>

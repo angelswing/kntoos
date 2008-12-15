@@ -41,26 +41,26 @@
         <tr>
           <td colspan="2" height="5">&nbsp;</td>
         </tr>
-        <tr valign="middle" class="Grid1">
+        <tr valign="absmiddle" class="Grid1">
           <td align="left" width="30%"  height="25">登陆帐号：</td>
           <td align="left" width="70%"><input type="text" name="user_tag" maxlength="30" size="30" class="TextBox" /></td>
         </tr>
-        <tr valign="middle" class="Grid1">
+        <tr valign="absmiddle" class="Grid1">
           <td align="left" height="25">用户姓名：</td>
           <td align="left"><input type="text" name="user_name" maxlength="30" size="30" class="TextBox" /></td>
         </tr>
-        <tr valign="middle" class="Grid1">
+        <tr valign="absmiddle" class="Grid1">
           <td align="left" height="25">所属部门：</td>
           <td align="left"><html:select property="deptid" style="width:192px" styleClass="SelectButton" onchange="selectrole()" >
                     <html:option value="">&nbsp;</html:option>
                     <html:optionsCollection name="user_F130_UserMgtForm" property="deptOptions" value="dept_id" label="dept_name"/>
                 </html:select></td>
         </tr>
-        <tr valign="middle" class="Grid1">
+        <tr valign="absmiddle" class="Grid1">
           <td align="left" height="25">&nbsp;</td>
           <td align="left" height="25">&nbsp;</td>
         </tr>
-        <tr valign="middle" class="Grid1">
+        <tr valign="absmiddle" class="Grid1">
           <td align="left" height="25">&nbsp;</td>
           <td align="right">
           <input type="button" name="butok" value="确  定" class="button" onclick="winselect()" />

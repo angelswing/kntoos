@@ -39,6 +39,7 @@ public class QueryOrdersController extends SimpleFormController
 			Logger.DEBUG, true);
 	private OrderDao orderDao;
 	private int pageSize;
+	private boolean filterAuditedOrders;
 
 	public QueryOrdersController()
 	{
@@ -66,59 +67,85 @@ public class QueryOrdersController extends SimpleFormController
 		this.pageSize = pageSize;
 	}
 
+	public boolean isFilterAuditedOrders()
+	{
+		return filterAuditedOrders;
+	}
+
+	public void setFilterAuditedOrders(boolean filterAuditedOrders)
+	{
+		this.filterAuditedOrders = filterAuditedOrders;
+	}
+
 	protected Object formBackingObject(HttpServletRequest request)
 			throws ModelAndViewDefiningException
 	{
 		log.info("QueryOrdersController formBackingObject...");
-		return new OrderQuerier();
-	}
-
-	private Map prepareControlModel(HttpServletRequest request,
-			Map controlModel, OrderQuerier orderQuerier) throws Exception
-	{
-		Map<Object, Object> model = (controlModel != null) ? controlModel
-				: new HashMap<Object, Object>();
-		OrderQuerier querier = (orderQuerier != null) ? orderQuerier
-				: new OrderQuerier();
-
-		int pageId = 0;
-		int pageCount = 0;
-		if(StringUtils.hasText(request.getParameter("pageId")))
+		
+		OrderQuerier querier = new OrderQuerier();
+		
+		int pageNo = 0;
+		int orderStatus = 0;
+		int pageSize = this.pageSize;
+		
+		// 处理有请求参数的情况
+		if(StringUtils.hasText(request.getParameter("pageNo")))
 		{
-			pageId = Integer.parseInt(request.getParameter("pageId"));
-		}
-		querier.setStartIndex(pageId * pageSize);
-		querier.setPageSize(pageSize);
-		try
-		{
-			QuerierResult result = orderDao.getOrders(querier);
-			if(result != null && result.getTotalCount() >= 0)
+			try
 			{
-				if(pageSize > result.getTotalCount())
-				{
-					pageCount = 1;
-				}
-				else
-				{
-					pageCount = result.getTotalCount() / pageSize;
-					if(result.getTotalCount() % pageSize != 0)
-					{
-						pageCount++;
-					}
-				}
+				pageNo = Integer.parseInt(request.getParameter("pageNo"));
 			}
-			model.put("pageId", String.valueOf(pageId));
-			model.put("pageSize", String.valueOf(pageSize));
-			model.put("pageCount", String.valueOf(pageCount));
-			model.put("totalCount", String.valueOf(result.getTotalCount()));
-			model.put("result", result.getVoList());
-
-			return model;
+			catch(Exception exp)
+			{
+			}
 		}
-		catch(Exception e)
+		querier.setPageNo(pageNo);
+		if(StringUtils.hasText(request.getParameter("status")))
 		{
-			throw e;
+			try
+			{
+				orderStatus = Integer.parseInt(request.getParameter("status"));
+				querier.setOrderstatus(orderStatus);
+			}
+			catch(Exception exp)
+			{
+			}
 		}
+		if(StringUtils.hasText(request.getParameter("pageSize")))
+		{
+			try
+			{
+				pageSize = Integer.parseInt(request.getParameter("pageSize"));
+			}
+			catch(Exception exp)
+			{
+			}
+		}
+		querier.setPageSize(pageSize);
+		querier.setStartIndex(pageNo * pageSize);
+		// 如果是form提交不执行查询操作
+		if(!isFormSubmission(request))
+		{
+			try
+			{
+				// 用户名
+				String user = (String)request.getSession().getAttribute("user_name");
+				querier.setClientname(user);
+				// 执行查询				
+				orderDao.getOrders(querier);
+			}
+			catch(Exception exp)
+			{
+				PageMsg pageMsg = new PageMsg();
+				pageMsg.setTarget("_self");
+				pageMsg.setMsg(exp.getMessage());
+				ModelAndView modelAndView = new ModelAndView("common/err", "error",
+						pageMsg);
+				throw new ModelAndViewDefiningException(modelAndView);
+			}
+		}
+
+		return querier;
 	}
 
 	protected Map referenceData(HttpServletRequest request) throws Exception
@@ -127,21 +154,14 @@ public class QueryOrdersController extends SimpleFormController
 
 		Map<Object, Object> model = new HashMap<Object, Object>();
 
-		List<String> orderstatusList = new ArrayList<String>();
-		orderstatusList.add("--Please Select--");
-		orderstatusList.add("create");
-		orderstatusList.add("pending");
-		orderstatusList.add("confirmed");
-		orderstatusList.add("delivered");
-		orderstatusList.add("delaied");
-		List<String> ordertypeList = new ArrayList<String>();
-		ordertypeList.add("--Please Select--");
-		ordertypeList.add("Lens");
-		ordertypeList.add("Frame");
-		ordertypeList.add("Frame And Lens");
-		model.put("orderstatusList", orderstatusList);
-		model.put("ordertypeList", ordertypeList);
-		prepareControlModel(request, model, null);
+		List<String> listOrderstatus = new ArrayList<String>();
+		listOrderstatus.add("--Please Select--");
+		listOrderstatus.addAll(OrderStatusEditor.getListStatus());
+		List<String> listOrdertype = new ArrayList<String>();
+		listOrdertype.add("--Please Select--");
+		listOrdertype.addAll(OrderTypeEditor.getListType());
+		model.put("listOrderstatus", listOrderstatus);
+		model.put("listOrdertype", listOrdertype);
 
 		return model;
 	}
@@ -150,10 +170,16 @@ public class QueryOrdersController extends SimpleFormController
 			ServletRequestDataBinder binder) throws Exception
 	{
 		log.info("QueryOrdersController initBinder...");
+		
 		super.initBinder(request, binder);
 		binder.registerCustomEditor(Integer.class, "orderstatus",
 				new OrderStatusEditor(true));
 		binder.registerCustomEditor(Integer.class, "ordertype",
+				new OrderTypeEditor(true));
+		// 为List对象的指定字段注册editor
+		binder.registerCustomEditor(Integer.class, "listOrder.orderstatus",
+				new OrderStatusEditor(true));
+		binder.registerCustomEditor(Integer.class, "listOrder.ordertype",
 				new OrderTypeEditor(true));
 	}
 
@@ -164,29 +190,35 @@ public class QueryOrdersController extends SimpleFormController
 	{
 
 		log.info("QueryOrdersController onSubmit...");
-		OrderQuerier querier = (OrderQuerier) command;
+		OrderQuerier querier = (OrderQuerier)command;
 
 		PageMsg pageMsg = new PageMsg();
+		pageMsg.setTarget("_self");
+		pageMsg.setUrl("/queryOrders.ord");
 
 		try
 		{
+			// 用户名
+			String user = (String)request.getSession().getAttribute("user_name");
+			querier.setClientname(user);
+			// 执行查询
+			orderDao.getOrders(querier);
 			log.info("QueryOrdersController start rendering...");
-
-			Map model = referenceData(request);
-			prepareControlModel(request, model, querier);
-
-			return showForm(request, errors, this.getSuccessView(), model);
+			// 如果直接返回ModelAndView对象，需要手动调用referenceData
+			// 调用showForm会自动调用
+			//Map controlModel = errors.getModel(); 
+			//controlModel.putAll(referenceData(request));
+			//return new ModelAndView(this.getSuccessView(), controlModel);
+			return showForm(request, errors, this.getSuccessView());
 		}
 		catch(ProcessException pe)
 		{
 			pageMsg.setMsg("Failed to query orders!");
-			pageMsg.setUrl("/queryOrders.ord");
 			return new ModelAndView("common/err", "error", pageMsg);
 		}
 		catch(Exception ex)
 		{
 			pageMsg.setMsg(ex.getMessage());
-			pageMsg.setUrl("/queryOrders.ord");
 			return new ModelAndView("common/err", "error", pageMsg);
 		}
 	}

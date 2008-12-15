@@ -3,24 +3,44 @@
 <beans>
 	<description>Online-Order Spring Configuration</description>
 
+	<!-- 
+		- hibernate session interceptor
+		- agang: use this interceptor to make hibernateTemplate supporting lazy initialization.  
+	-->
+	<bean name="openSessionInViewInterceptor"
+		class="org.springframework.orm.hibernate3.support.OpenSessionInViewInterceptor">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+		<!-- 1 means FLUSH_AUTO -->
+		<property name="flushMode">
+			<value>1</value>
+		</property>
+	</bean>
+
 	<bean id="SimpleUrlMap_ord"
 		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping"
 		singleton="true" lazy-init="default" autowire="default"
 		dependency-check="default">
+		<property name="interceptors">
+			<list>
+				<ref bean="openSessionInViewInterceptor" />
+			</list>
+		</property>
 		<property name="mappings">
 			<props>
-
 				<!--comm management-->
 				<prop key="/welcome.ord">commController</prop>
 				<prop key="/login.ord">loginController</prop>
 				<prop key="/menu.ord">functionController</prop>
-
+				<!-- order management -->
 				<prop key="/addLensOrder.ord">addLensOrderController</prop>
 				<prop key="/modifyLensOrder.ord">modifyLensOrderController</prop>
 				<prop key="/listOrders.ord">listOrdersController</prop>
 				<prop key="/viewOrder.ord">viewOrderController</prop>
 				<prop key="/queryOrders.ord">queryOrdersController</prop>
 				<prop key="/deleteOrders.ord">deleteOrdersController</prop>
+				<prop key="/queryAuditedOrders.ord">queryAuditedOrdersController</prop>
 			</props>
 		</property>
 	</bean>
@@ -63,15 +83,16 @@
 
 	<!-- modify by agang begin-->
 
-	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
-		<property name="basename" value="messages"/>
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basename" value="messages" />
 	</bean>
 
 	<bean id="addLensOrderController" class="com.conant.order.web.controller.AddLensOrderController">
 		<property name="orderDao" ref="orderDao" />
 		<property name="lensModelDao" ref="lensModelDao" />
-		<property name="commandName" value="lensOrderForm" />
-		<property name="formView" value="EditLensOrderForm" />
+		<property name="commandName" value="order" />
+		<property name="formView" value="EditLensOrder" />
 		<property name="successView" value="common/ok" />
 		<property name="validator" ref="lensOrderValidator" />
 	</bean>
@@ -80,8 +101,8 @@
 		class="com.conant.order.web.controller.ModifyLensOrderController">
 		<property name="orderDao" ref="orderDao" />
 		<property name="lensModelDao" ref="lensModelDao" />
-		<property name="commandName" value="lensOrderForm" />
-		<property name="formView" value="EditLensOrderForm" />
+		<property name="commandName" value="order" />
+		<property name="formView" value="EditLensOrder" />
 		<property name="successView" value="common/ok" />
 		<property name="validator" ref="lensOrderValidator" />
 	</bean>
@@ -92,17 +113,29 @@
 
 	<bean id="viewOrderController" class="com.conant.order.web.controller.ViewOrderController">
 		<property name="orderDao" ref="orderDao" />
+		<property name="commandName" value="order" />
+		<property name="formView" value="ViewOrder" />
 	</bean>
 
 	<bean id="queryOrdersController" class="com.conant.order.web.controller.QueryOrdersController">
 		<property name="orderDao" ref="orderDao" />
+		<property name="commandName" value="orderQuerier" />
 		<property name="formView" value="QueryOrders" />
 		<property name="successView" value="QueryOrders" />
 		<property name="pageSize" value="20" />
 	</bean>
 
+	<bean id="queryAuditedOrdersController" class="com.conant.order.web.controller.QueryOrdersController">
+		<property name="orderDao" ref="orderDao" />
+		<property name="formView" value="QueryOrders" />
+		<property name="successView" value="QueryOrders" />
+		<property name="pageSize" value="20" />
+		<property name="filterAuditedOrders" value="true" />
+	</bean>
+
 	<bean id="deleteOrdersController" class="com.conant.order.web.controller.DeleteOrdersController">
 		<property name="orderDao" ref="orderDao" />
+		<property name="commandName" value="orderQuerier" />
 		<property name="formView" value="QueryOrders" />
 		<property name="successView" value="common/ok" />
 	</bean>

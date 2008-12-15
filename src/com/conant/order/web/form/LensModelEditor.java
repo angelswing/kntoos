@@ -12,29 +12,35 @@ import com.conant.order.vo.LensModel;
 
 /**
  * @author Administrator
- *
+ * 
  */
-public class LensModelEditor extends PropertyEditorSupport {
-	private static final Logger log = Logger.getLogger("LensModelEditor", Logger.DEBUG, true);
-	
+public class LensModelEditor extends PropertyEditorSupport
+{
+	private static final Logger log = Logger.getLogger("LensModelEditor",
+			Logger.DEBUG, true);
+
 	private List<LensModel> lensmodels;
-	
-	public LensModelEditor(List lensmodels) {
+
+	public LensModelEditor(List lensmodels)
+	{
 		this.lensmodels = lensmodels;
 	}
 
-    public LensModel getValue() {
-        return (LensModel)super.getValue();
-    }
-    
+	public LensModel getValue()
+	{
+		return (LensModel)super.getValue();
+	}
+
 	@Override
-	public String getAsText() {
+	public String getAsText()
+	{
 		LensModel model = getValue();
 		return (model == null) ? "" : model.getLensmodel();
 	}
-	
+
 	@Override
-	public void setAsText(String text) throws IllegalArgumentException {
+	public void setAsText(String text) throws IllegalArgumentException
+	{
 		log.info("LensModelEditor: setAsText-" + text);
 		Integer modelId = null;
 		for(LensModel model : lensmodels)
@@ -52,7 +58,7 @@ public class LensModelEditor extends PropertyEditorSupport {
 		}
 		catch(Exception e)
 		{
-			
+
 		}
 	}
 }

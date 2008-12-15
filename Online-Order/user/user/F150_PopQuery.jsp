@@ -38,19 +38,19 @@ function doReset(){
         <tr>
           <td colspan="2" height="5">&nbsp;</td>
         </tr>
-        <tr valign="middle" class="Grid1">
+        <tr valign="absmiddle" class="Grid1">
             <td align="left" width="40%" height="18">部门名称：</td>
             <td align="left" width="60%">
                 <html:text property="dept_name" maxlength="16" size="40" styleClass="TextBox"></html:text>
             </td>
         </tr>
-        <tr valign="middle" class="Grid1">
+        <tr valign="absmiddle" class="Grid1">
             <td align="left" height="25">部门描述：</td>
             <td align="left">
                 <html:text property="dept_desc" maxlength="30" size="40" styleClass="TextBox"></html:text>
             </td>
         </tr>
-<!--        <tr valign="middle" class="Grid1">
+<!--        <tr valign="absmiddle" class="Grid1">
             <td align="left" height="25">上级部门：</td>
             <td align="left">
              <html:select  property="parent_dept_id" style="width:252px" styleClass="SelectButton">
@@ -60,7 +60,7 @@ function doReset(){
              </html:select>
             </td>
         </tr>
-        <tr valign="middle" class="Grid1">
+        <tr valign="absmiddle" class="Grid1">
           <td align="left" height="25">角色列表：</td>
           <td align="left">
               <html:select property="parent_role" style="width:251px" styleClass="SelectButton">
@@ -71,7 +71,7 @@ function doReset(){
         </tr>-->
         <tr><td>&nbsp;</td></tr>
         <tr><td>&nbsp;</td></tr>
-         <tr valign="middle" class="Grid1">
+         <tr valign="absmiddle" class="Grid1">
           <td align="left" height="25">&nbsp;</td>
           <td align="right">
           <input type="button" name="butok" value="确  定" class="button" onclick="doSelect()" />

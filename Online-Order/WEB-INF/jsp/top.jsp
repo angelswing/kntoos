@@ -19,7 +19,7 @@ h1,h2,h3,h4,h5,h6 {
 <body>
 <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
   <tr>
-    <th width="680" height="84" align="center" valign="middle" background="<%=request.getContextPath()%>/resources/images/top.jpg" scope="col"><img src="<%=request.getContextPath()%>/resources/images/name.gif" width="598" height="47" id="Image1" /></th>
+    <th width="680" height="84" align="center" valign="absmiddle" background="<%=request.getContextPath()%>/resources/images/top.jpg" scope="col"><img src="<%=request.getContextPath()%>/resources/images/name.gif" width="598" height="47" id="Image1" /></th>
     <th width="39%" align="right" background="<%=request.getContextPath()%>/resources/images/top.jpg" scope="col"><p><img src="<%=request.getContextPath()%>/resources/images/LOGO1.png" width="182" height="18" id="Image2" /></p>
     <p>&nbsp;</p></th>
   </tr>
@@ -35,7 +35,7 @@ h1,h2,h3,h4,h5,h6 {
       <tr>
         <th width="73%" valign="top" scope="col"><span class="STYLE9">Welcome <%=(String)request.getSession().getAttribute("user_name")%></span> </th>
         <th width="14%" valign="top" scope="col"><img src="<%=request.getContextPath()%>/resources/images/Exit_C.gif" width="16" height="20" /></th>
-        <th width="13%" align="left" valign="middle" class="STYLE10" scope="col">Exit</th>
+        <th width="13%" align="left" valign="absmiddle" class="STYLE10" scope="col">Exit</th>
       </tr>
     </table></th>
   </tr>

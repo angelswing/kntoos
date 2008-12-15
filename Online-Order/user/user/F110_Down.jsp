@@ -100,7 +100,7 @@
               <html:text maxlength="11" style="width:249px" styleClass="TextBox" property="role_name" ></html:text><font color="red">&nbsp;&nbsp;*</font>
             </td>
         </tr>
-        <tr valign="middle" class="Grid1">
+        <tr valign="absmiddle" class="Grid1">
             <td align="left" height="25">½ÇÉ«ÃèÊö£º</td>
             <td align="left">
               <html:textarea property="role_depict" rows="4" cols="38" styleClass="TextBox"></html:textarea>

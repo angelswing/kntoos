@@ -42,7 +42,7 @@
     <html:hidden property="op"/>
     <html:hidden property="forward"/>
 <table width="100%" height="100%" border="0" cellSpacing="0" cellPadding="0" class="butt">
-  <tr valign="middle" class="Grid1" style="height:33px">
+  <tr valign="absmiddle" class="Grid1" style="height:33px">
     <td align="center" class="orarowheader">&nbsp;½ÇÉ«ÁÐ±í£º
               <html:select property="roleselect" style="width:150px" styleClass="SelectButton" onchange="selectrole()">
                   <html:option value="#">&nbsp;</html:option>
@@ -358,7 +358,7 @@
     </table>
     </td>
 
-    <td align="center" valign="middle">
+    <td align="center" valign="absmiddle">
       <div style="visibility: hidden">
       <table border="0" cellpadding="0" cellspacing="0" align="center">
         <tr class="Grid1">

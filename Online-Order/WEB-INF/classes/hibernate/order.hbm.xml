@@ -16,7 +16,7 @@
 	</class>
 
 	<class name="com.conant.order.vo.FrameDetail" table="ors_frame_detail">
-		<id column="id" name="id" unsaved-value="0">
+		<id column="id" name="id">
 			<generator class="foreign">
 				<param name="property">orsorder</param>
 			</generator>
@@ -102,22 +102,23 @@
 		</set>
 	</class>
 
-	<class name="com.conant.order.vo.OrsOrder" table="ors_order">
+	<class name="com.conant.order.vo.OrsOrder" table="ors_order" 
+			dynamic-insert="true" dynamic-update="true">
 		<id name="id" type="java.lang.Integer">
 			<column name="id" />
 			<generator class="native" />
 		</id>
-		<property name="exist" type="int">
-			<column name="exist" not-null="true">
+		<property name="exist" type="java.lang.Integer">
+			<column name="exist" default="1">
 				<comment>mark of existence</comment>
 			</column>
 		</property>
-		<property name="ordertype" type="int">
+		<property name="ordertype" type="java.lang.Integer">
 			<column name="ordertype" not-null="true">
 				<comment>order type</comment>
 			</column>
 		</property>
-		<property name="orderstatus" type="int">
+		<property name="orderstatus" type="java.lang.Integer">
 			<column name="orderstatus" not-null="true">
 				<comment>orders status</comment>
 			</column>
@@ -167,43 +168,48 @@
 				<comment>shipment date</comment>
 			</column>
 		</property>
+		<property name="auditeddate" type="timestamp">
+			<column length="19" name="auditeddate">
+				<comment>audited date</comment>
+			</column>
+		</property>
 		<property name="remarks" type="string">
 			<column length="200" name="remarks">
 				<comment>remarks</comment>
 			</column>
 		</property>
 		<one-to-one cascade="all" class="com.conant.order.vo.LensDetail"
-			name="lensdetail" />
+			name="lensdetail" lazy="proxy"/>
 		<one-to-one cascade="all" class="com.conant.order.vo.FrameDetail"
-			name="framedetail" />
+			name="framedetail" lazy="proxy"/>
 	</class>
 
-	<class name="com.conant.order.vo.LensModel" lazy="false" table="ors_lens_model">
+	<class name="com.conant.order.vo.LensModel" table="ors_lens_model">
 		<id name="id" type="java.lang.Integer">
 			<column name="id" />
 			<generator class="native" />
 		</id>
-		<property name="lenstype" type="int">
+		<property name="lenstype" type="java.lang.Integer">
 			<column name="lenstype" not-null="true">
 				<comment>lens type</comment>
 			</column>
 		</property>
-		<property name="opticaltype" type="int">
+		<property name="opticaltype" type="java.lang.Integer">
 			<column name="opticaltype" not-null="true">
 				<comment>optical type of lens</comment>
 			</column>
 		</property>
-		<property name="lenscolor" type="int">
+		<property name="lenscolor" type="java.lang.Integer">
 			<column name="lenscolor" not-null="true">
 				<comment>lens color</comment>
 			</column>
 		</property>
-		<property name="lenscoating" type="int">
+		<property name="lenscoating" type="java.lang.Integer">
 			<column name="lenscoating" not-null="true">
 				<comment>coating type</comment>
 			</column>
 		</property>
-		<property name="customizable" type="int">
+		<property name="customizable" type="java.lang.Integer">
 			<column name="customizable" not-null="true">
 				<comment>customizable or not</comment>
 			</column>
@@ -224,7 +230,7 @@
 	</class>
 
 	<class name="com.conant.order.vo.LensDetail" table="ors_lens_detail">
-		<id column="id" name="id" unsaved-value="0">
+		<id column="id" name="id">
 			<generator class="foreign">
 				<param name="property">orsorder</param>
 			</generator>
@@ -237,27 +243,27 @@
 				<comment>the model id of lens</comment>
 			</column>
 		</many-to-one>
-		<property name="diameter" type="float">
+		<property name="diameter" type="java.lang.Float">
 			<column name="diameter" not-null="true" precision="12" scale="0">
 				<comment>diameter of lens</comment>
 			</column>
 		</property>
-		<property name="rsphere" type="float">
+		<property name="rsphere" type="java.lang.Float">
 			<column name="rsphere" not-null="true" precision="12" scale="0">
 				<comment>sphere of right lens</comment>
 			</column>
 		</property>
-		<property name="lsphere" type="float">
+		<property name="lsphere" type="java.lang.Float">
 			<column name="lsphere" not-null="true" precision="12" scale="0">
 				<comment>sphere of left lens</comment>
 			</column>
 		</property>
-		<property name="rcylinder" type="float">
+		<property name="rcylinder" type="java.lang.Float">
 			<column name="rcylinder" not-null="true" precision="12" scale="0">
 				<comment>cylinder of right lens</comment>
 			</column>
 		</property>
-		<property name="lcylinder" type="float">
+		<property name="lcylinder" type="java.lang.Float">
 			<column name="lcylinder" not-null="true" precision="12" scale="0">
 				<comment>cylinder of left lens</comment>
 			</column>
@@ -394,7 +400,7 @@
 				<comment>frame collection</comment>
 			</column>
 		</property>
-		<property name="rimless" type="int">
+		<property name="rimless" type="java.lang.Integer">
 			<column name="rimless" not-null="true">
 				<comment>rimless or not</comment>
 			</column>

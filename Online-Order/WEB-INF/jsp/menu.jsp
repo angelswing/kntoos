@@ -130,9 +130,9 @@ a:active {
 		      if(nodeType == 0){	    
 		%>
       <tr>
-        <td height="31" align="center" valign="bottom">
-        <div align="center" class="STYLE3" onMouseOver="this.className='test1'" onMouseOut="this.className='test'">
-        <%=nodeName%>
+        <td height="31" align="left" valign="bottom">
+        <div align="left" class="STYLE3" onMouseOver="this.className='test1'" onMouseOut="this.className='test'"><B>
+        &nbsp;&nbsp;&nbsp;&nbsp;<%=nodeName%>
         </div>
         </td>
       </tr>
@@ -145,9 +145,9 @@ a:active {
 		      }else if(nodeType == 1){
 		       %>
       <tr>
-        <td height="30" align="center">
-        <div align="center" class="STYLE3" onMouseOver="this.className='test1'" onMouseOut="this.className='test'">
-        <a href="<%=request.getContextPath()%>/<%=nodeURL%>" target="mainFrame"><%=nodeName%></a>
+        <td height="30" align="left">
+        <div align="left" class="STYLE3" onMouseOver="this.className='test1'" onMouseOut="this.className='test'">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<%=request.getContextPath()%>/<%=nodeURL%>" target="mainFrame"><%=nodeName%></a>
         </div>
         </td>
       </tr>

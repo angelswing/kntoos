@@ -39,19 +39,19 @@
         <tr>
           <td colspan="2" height="5">&nbsp;</td>
         </tr>
-        <tr valign="middle" class="Grid1">
+        <tr valign="absmiddle" class="Grid1">
           <td align="left" width="30%"  height="25">登陆帐号：</td>
           <td align="left" width="70%"><input type="text" name="user_tag" maxlength="30" size="30" class="TextBox" value="" /></td>
         </tr>
-        <tr valign="middle" class="Grid1">
+        <tr valign="absmiddle" class="Grid1">
           <td align="left" height="25">用户姓名：</td>
           <td align="left"><input type="text" name="user_name" maxlength="30" size="30" class="TextBox" value="" /></td>
         </tr>
-        <tr valign="middle" class="Grid1">
+        <tr valign="absmiddle" class="Grid1">
           <td align="left" height="25">&nbsp;</td>
           <td align="left" height="25">&nbsp;</td>
         </tr>
-        <tr valign="middle" class="Grid1">
+        <tr valign="absmiddle" class="Grid1">
           <td align="left" height="25">&nbsp;</td>
           <td align="right">
           <input type="button" name="butok" value="确  定" class="button" onclick="winselect()" />

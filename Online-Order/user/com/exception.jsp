@@ -12,14 +12,14 @@
 <table width="500" border="0" align="center" cellpadding="1"  cellspacing="1" background="#F1F1F1" >
   <br>
        <br> <br> <br>
-    <tr class="Grid1" valign="middle" >
+    <tr class="Grid1" valign="absmiddle" >
     	<td  width="20%" align="right" nowrap ><bean:write name="InfoForm" property="title"/>£º</td>
         <td  width="20%" align="left" nowrap><bean:write name="InfoForm" property="message"/></td>
 	</tr>
-      <tr class="Grid1" valign="middle" >
+      <tr class="Grid1" valign="absmiddle" >
         <td > &nbsp;</td>
 	</tr>
-     <tr class="Grid1" valign="middle" >
+     <tr class="Grid1" valign="absmiddle" >
         <td align="center"  colspan="2" nowrap  ><button class="button" onclick="history.back()">·µ»Ø</button></td>
 	</tr>
 </table>

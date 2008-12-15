@@ -13,19 +13,19 @@
     <html:hidden property="op"/>
     <html:hidden property="forward"/>
       <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left" class="MainTable" >
-        <tr valign="middle" class="Grid1">
+        <tr valign="absmiddle" class="Grid1">
           <td align="left" width="12%"  height="25">登陆帐号：</td>
           <td align="left" width="38%"><html:text maxlength="20" size="30" styleClass="TextBox" property="user_tag" readonly="true"></html:text></td>
           <td align="left" width="12%" height="25">邮件地址：</td>
           <td align="left" width="38%"><html:text maxlength="25" size="30" styleClass="TextBox" property="email" readonly="true"></html:text></td>
         </tr>
-        <tr valign="middle" class="Grid1">
+        <tr valign="absmiddle" class="Grid1">
           <td align="left" height="25">用户姓名：</td>
           <td align="left"><html:text maxlength="10" size="30" styleClass="TextBox" property="user_name" readonly="true"></html:text></td>
           <td align="left" height="25">用户地址：</td>
           <td align="left"><html:text maxlength="20" size="30" styleClass="TextBox" property="address" readonly="true"></html:text></td>
         </tr>
-        <tr valign="middle" class="Grid1">
+        <tr valign="absmiddle" class="Grid1">
           <td align="left" height="25">固定电话：</td>
           <td align="left"><html:text maxlength="15" size="30" styleClass="TextBox" property="home_tel" readonly="true"></html:text></td>
           <td align="left" height="25">移动电话：</td>

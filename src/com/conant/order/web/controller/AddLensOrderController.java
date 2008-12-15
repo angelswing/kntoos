@@ -4,41 +4,36 @@
  */
 package com.conant.order.web.controller;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Date;
-import java.text.SimpleDateFormat;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.propertyeditors.CustomDateEditor;
-import org.springframework.validation.BindException;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.ServletRequestDataBinder;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.ModelAndViewDefiningException;
-import org.springframework.web.servlet.mvc.SimpleFormController;
 
 import com.conant.order.common.PageMsg;
 import com.conant.order.dao.LensModelDao;
-import com.conant.order.dao.OrderDao;
 import com.conant.order.util.Logger;
-import com.conant.order.util.ProcessException;
 import com.conant.order.vo.LensModel;
+import com.conant.order.vo.OrderUtils;
 import com.conant.order.vo.OrsOrder;
 import com.conant.order.web.form.LensModelEditor;
-import com.conant.order.web.form.LensOrderForm;
 
 /**
  * 
  * @author Administrator
  */
-public class AddLensOrderController extends SimpleFormController
+public class AddLensOrderController extends AddOrderController
 {
 	private static final Logger log = Logger.getLogger(
 			"AddOrderFormController", Logger.DEBUG, true);
-	private OrderDao orderDao;
 	private LensModelDao lensModelDao;
 	private List lensmodels;
 
@@ -46,16 +41,6 @@ public class AddLensOrderController extends SimpleFormController
 	{
 		// Initialize controller properties here or
 		// in the Web Application Context
-	}
-
-	public OrderDao getOrderDao()
-	{
-		return orderDao;
-	}
-
-	public void setOrderDao(OrderDao orderDao)
-	{
-		this.orderDao = orderDao;
 	}
 
 	public LensModelDao getLensModelDao()
@@ -71,7 +56,22 @@ public class AddLensOrderController extends SimpleFormController
 	protected Object formBackingObject(HttpServletRequest request)
 			throws ModelAndViewDefiningException
 	{
-			return new LensOrderForm();
+		log.info("AddOrderFormController formBackingObject...");
+		
+		OrsOrder order = new OrsOrder();
+		OrderUtils.completeLensOrder(order);
+		String user = (String)request.getSession().getAttribute("user_name");
+		if(!StringUtils.hasText(user))
+		{
+			PageMsg pageMsg = new PageMsg();
+			pageMsg.setTarget("_self");
+			pageMsg.setMsg("Please login first!");
+			ModelAndView modelAndView = new ModelAndView("common/err", "error", pageMsg);
+			throw new ModelAndViewDefiningException(modelAndView);
+		}
+		order.setClientname(user);
+		
+		return order;
 	}
 
 	protected Map referenceData(HttpServletRequest request) throws Exception
@@ -80,40 +80,6 @@ public class AddLensOrderController extends SimpleFormController
 		lensmodels = lensModelDao.getLensModel();
 		model.put("lensmodels", lensmodels);
 		return model;
-	}
-
-	// Use onSubmit instead of doSubmitAction
-	// when you need access to the Request, Response, or BindException objects
-	@Override
-	protected ModelAndView onSubmit(HttpServletRequest request,
-			HttpServletResponse response, Object command, BindException errors)
-			throws Exception
-	{
-
-		log.info("AddOrderFormController onSubmit...");
-		LensOrderForm orderForm = (LensOrderForm) command;
-		OrsOrder order = orderForm.getOrder();
-
-		PageMsg pageMsg = new PageMsg();
-
-		try
-		{
-			orderDao.insertOrder(order);
-			pageMsg.setMsg("Add order successfully!");
-			pageMsg.setUrl("/queryOrders.ord");
-			return new ModelAndView(this.getSuccessView(), "success", pageMsg);
-		}
-		catch(ProcessException pe)
-		{
-			pageMsg.setMsg(pe.getErrorReason());
-			pageMsg.setUrl("/addLensOrder.ord");
-			return new ModelAndView("common/err", "error", pageMsg);
-		}
-		catch(Exception ex)
-		{
-			pageMsg.setMsg(ex.getMessage());
-			return new ModelAndView("common/err", "error", pageMsg);
-		}
 	}
 
 	protected void initBinder(HttpServletRequest request,

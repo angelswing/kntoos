@@ -170,7 +170,7 @@
     <html:hidden property="forward"/>
     <html:hidden property="lock_flag"/>  
   <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="MainTable" >
-        <tr valign="middle" class="Grid1">
+        <tr valign="absmiddle" class="Grid1">
           <td align="left" width="8%"  height="25">时段类型：</td>
           <td align="left" width="42%">
                 <html:select property="timetype" style="width:116px" styleClass="SelectButton" >
@@ -189,7 +189,7 @@
         <tr>
           <td>&nbsp;</td>
         </tr>
-        <tr valign="middle" class="Grid1">
+        <tr valign="absmiddle" class="Grid1">
           <td align="left" height="25">起始时间：</td>
           <td align="left"><input maxlength="10" size="17" class="TextBox" name="starttime" readonly="readonly" value="" />
           &nbsp;<img src="<%=request.getContextPath()%>/user/images/calendar.gif" style="cursor:hand" onclick="javaScript:getDATE(document.forms[0].starttime);" alt="">
@@ -197,7 +197,7 @@
           <td align="left" height="25">&nbsp;</td>
           <td align="left">&nbsp;</td>
         </tr>
-        <tr valign="middle" class="Grid1">
+        <tr valign="absmiddle" class="Grid1">
           <td align="left" height="25">终止时间：</td>
           <td align="left"><input maxlength="10" size="17" class="TextBox" name="endtime" readonly="readonly" value="" />
           &nbsp;<img src="<%=request.getContextPath()%>/user/images/calendar.gif" style="cursor:hand" onclick="javaScript:getDATE(document.forms[0].endtime);" alt="">

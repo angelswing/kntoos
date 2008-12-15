@@ -6,12 +6,15 @@
 package com.conant.order.web.form;
 
 import java.beans.PropertyEditorSupport;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.util.StringUtils;
 
 import com.conant.order.util.Logger;
+import com.conant.order.vo.OrderStatus;
 
 /**
  * @author Administrator
@@ -23,17 +26,37 @@ public class OrderStatusEditor extends PropertyEditorSupport
 			"OrderStatusEditor", Logger.DEBUG, true);
 	
 	private boolean allowEmpty;
-	private Map<Integer, String> orderStatus;
+	private static final Map<Integer, String> orderStatus;
+	
+	static
+	{
+		orderStatus = new HashMap<Integer, String>();
+		orderStatus.put(OrderStatus.TYPE_PENDING, "pending");
+		orderStatus.put(OrderStatus.TYPE_AUDITED, "audited");
+		orderStatus.put(OrderStatus.TYPE_COMPLETE, "complete");
+		orderStatus.put(OrderStatus.TYPE_DELIVERD, "delivered");
+		orderStatus.put(OrderStatus.TYPE_DELAYED, "delayed");		
+	}
 	
 	public OrderStatusEditor(boolean allowEmpty)
 	{
 		this.allowEmpty = allowEmpty;
-		orderStatus = new HashMap<Integer, String>();
-		orderStatus.put(1, "create");
-		orderStatus.put(2, "pending");
-		orderStatus.put(3, "confirmed");
-		orderStatus.put(4, "delivered");
-		orderStatus.put(5, "delaied");
+	}
+	
+	public static Map<Integer, String> getMapStatus()
+	{
+		return orderStatus;
+	}
+	
+	public static List<String> getListStatus()
+	{
+		List<String> listStatus = new ArrayList<String>();
+        for(Map.Entry<Integer, String> entry : orderStatus.entrySet())
+        {
+        	listStatus.add(entry.getValue());
+        }
+        
+        return listStatus;
 	}
 	
 	@Override

@@ -171,7 +171,7 @@ if (isNav4 && !isDom) {
       </table>
    </div>
   </td>
-  <td class="HalfWindow" width="15" height="100%" vAlign="middle" onclick="switchSysBar()" align="center">
+  <td class="HalfWindow" width="15" height="100%" valign="absmiddle" onclick="switchSysBar()" align="center">
     <SPAN class="navPoint" id="switchPoint">3</SPAN>
   </td>
 </table>

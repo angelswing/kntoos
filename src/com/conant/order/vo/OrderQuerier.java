@@ -6,6 +6,7 @@
 package com.conant.order.vo;
 
 import java.io.Serializable;
+import java.util.List;
 
 import org.hibernate.criterion.Order;
 
@@ -24,10 +25,14 @@ public class OrderQuerier implements Serializable
 	private String requesteddate;
 	private String remarks;
 	private String[] ids;
-
 	private Order[] orders;
+	private int pageNo;
 	private int pageSize;
+	private int pageCount;
 	private int startIndex;
+	private List<OrsOrder> listOrder;
+	private int recordCount;
+	private boolean filterAuditedOrders;
 
 	public Integer getId()
 	{
@@ -119,6 +124,16 @@ public class OrderQuerier implements Serializable
 		this.orders = orders;
 	}
 
+	public int getPageNo()
+	{
+		return pageNo;
+	}
+
+	public void setPageNo(int pageNo)
+	{
+		this.pageNo = pageNo;
+	}
+
 	public int getPageSize()
 	{
 		return pageSize;
@@ -127,6 +142,16 @@ public class OrderQuerier implements Serializable
 	public void setPageSize(int pageSize)
 	{
 		this.pageSize = pageSize;
+	}
+
+	public int getPageCount()
+	{
+		return pageCount;
+	}
+
+	public void setPageCount(int pageCount)
+	{
+		this.pageCount = pageCount;
 	}
 
 	public int getStartIndex()
@@ -147,5 +172,35 @@ public class OrderQuerier implements Serializable
 	public void setIds(String[] ids)
 	{
 		this.ids = ids;
-	}	
+	}
+
+	public List<OrsOrder> getListOrder()
+	{
+		return listOrder;
+	}
+
+	public void setListOrder(List<OrsOrder> listOrder)
+	{
+		this.listOrder = listOrder;
+	}
+
+	public int getRecordCount()
+	{
+		return recordCount;
+	}
+
+	public void setRecordCount(int recordCount)
+	{
+		this.recordCount = recordCount;
+	}
+
+	public boolean isFilterAuditedOrders()
+	{
+		return filterAuditedOrders;
+	}
+
+	public void setFilterAuditedOrders(boolean filterAuditedOrders)
+	{
+		this.filterAuditedOrders = filterAuditedOrders;
+	}
 }

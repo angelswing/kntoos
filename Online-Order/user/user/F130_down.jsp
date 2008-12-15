@@ -99,25 +99,25 @@
   <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="MainTable" >
     <tr valign="top" class="Grid1">
       <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="MainTable" >
-        <tr valign="middle" class="Grid1">
+        <tr valign="absmiddle" class="Grid1">
           <td align="left" width="12%"  height="25">登陆帐号：</td>
           <td align="left" width="35%"><html:text maxlength="15" size="30" styleClass="TextBox" property="user_tag" readonly="true" onkeyup="value=value.replace(/[\W]/g,'')"></html:text><font color="red">&nbsp;*</font></td>
           <td align="left" width="12%" height="25">邮件地址：</td>
           <td align="left" width="35%"><html:text maxlength="25" size="30" styleClass="TextBox" property="email"></html:text></td>
         </tr>
-        <tr valign="middle" class="Grid1">
+        <tr valign="absmiddle" class="Grid1">
           <td align="left" height="25">密  码：</td>
           <td align="left"><html:password maxlength="15" size="30" styleClass="TextBox" property="user_passwd" onkeyup="value=value.replace(/[^\a-zA-Z0-9]/g,'')"></html:password><font color="red">&nbsp;*</font></td>
           <td align="left" height="25">用户地址：</td>
           <td align="left"><html:text maxlength="40" size="30" styleClass="TextBox" property="address"></html:text></td>
         </tr>
-        <tr valign="middle" class="Grid1">
+        <tr valign="absmiddle" class="Grid1">
           <td align="left" height="25">再次输入密码：</td>
           <td align="left"><html:password maxlength="15" size="30" styleClass="TextBox" property="user_passwd_t" onkeyup="value=value.replace(/[^\a-zA-Z0-9]/g,'')"></html:password><font color="red">&nbsp;*</font></td>
           <td align="left" height="25">固定电话：</td>
           <td align="left"><html:text maxlength="15" size="30" styleClass="TextBox" property="home_tel"></html:text></td>
         </tr>
-        <tr valign="middle" class="Grid1">
+        <tr valign="absmiddle" class="Grid1">
           <td align="left" height="25">用户姓名：</td>
           <td align="left"><html:text maxlength="10" size="30" styleClass="TextBox" property="user_name" ></html:text><font color="red">&nbsp;*</font></td>
           <td align="left" height="25">移动电话：</td>

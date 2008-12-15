@@ -76,7 +76,7 @@
     <html:hidden property="op"/>
     <html:hidden property="forward"/>
 	<table width="100%" border="0" cellpadding="2" cellspacing="2" align="center" class="MainTable" >
-        <tr valign="middle" class="Grid1">
+        <tr valign="absmiddle" class="Grid1">
             <td align="left" width="10%" height="25">部门名称：</td>
             <td align="left" width="40%">
               <html:text property="dept_name" maxlength="16" style="width:249px" styleClass="TextBox" ></html:text><font color="red">&nbsp;&nbsp;*</font>
@@ -86,7 +86,7 @@
               <html:text property="principal" maxlength="10" size="40" styleClass="TextBox" ></html:text>
             </td>
         </tr>
-        <tr valign="middle" class="Grid1">
+        <tr valign="absmiddle" class="Grid1">
             <td align="left" height="25">部门描述：</td>
             <td align="left">
               <html:textarea property="dept_desc" rows="3" cols="38" styleClass="TextBox"></html:textarea>
@@ -97,7 +97,7 @@
               <html:text property="telephone" maxlength="15" size="40" styleClass="TextBox"></html:text>
             </td>
         </tr>
-        <tr valign="middle" class="Grid1">
+        <tr valign="absmiddle" class="Grid1">
            <td align="left" height="25">上级部门：</td>
            <td align="left">
              <html:select property="parent_dept_id" style="width:250px" styleClass="SelectButton">
@@ -110,7 +110,7 @@
              <html:text property="faxes" maxlength="15" size="40" styleClass="TextBox"></html:text>
            </td>
         </tr>
-        <tr valign="middle" class="Grid1">
+        <tr valign="absmiddle" class="Grid1">
           <td align="left" height="25">角色列表：</td>
           <td align="left">
               <html:select property="parent_role" style="width:250px" styleClass="SelectButton">
@@ -145,7 +145,7 @@
               </html:select>&nbsp;市
            </td>           
         </tr>
-         <tr valign="middle" class="Grid1">
+         <tr valign="absmiddle" class="Grid1">
            <td align="left" height="25">部门角色：</td>
             <td align="left" colspan="3">
                <html:select property="deptrolelist" style="width:251px" styleClass="SelectButton" size="4" multiple="true">

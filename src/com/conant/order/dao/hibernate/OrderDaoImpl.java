@@ -51,34 +51,26 @@ public class OrderDaoImpl implements OrderDao
 	public OrsOrder getOrder(int orderId) throws ProcessException
 	{
 		OrsOrder order = null;
-		List list = template.find("from OrsOrder orsorder where orsorder.id = "
-				+ orderId);
-		if(list.size() == 1)
+		try
 		{
-			order = (OrsOrder)list.get(0);
-			if(order != null)
-			{
-				List listLensdetail = template
-						.find("from LensDetail lensdetail where lensdetail.id = "
-								+ order.getId());
-				if(listLensdetail != null && listLensdetail.size() > 0)
-				{
-					LensDetail lensdetail = (LensDetail) listLensdetail.get(0);
-					order.setLensdetail(lensdetail);
-				}
-			}
+			order = (OrsOrder)template.load(OrsOrder.class, new Integer(orderId));
+		}
+		catch(Exception ex)
+		{
+			ex.printStackTrace();
+			throw new ProcessException(120001);
 		}
 
 		return order;
 	}
-
-	public void insertOrder(OrsOrder order) throws ProcessException
+	
+	public void saveOrder(OrsOrder order) throws ProcessException
 	{
 		try
 		{
 			if(order != null)
 			{
-				template.save(order);
+				template.saveOrUpdate(order);
 			}
 			else
 			{
@@ -89,25 +81,6 @@ public class OrderDaoImpl implements OrderDao
 		{
 			ex.printStackTrace();
 			throw new ProcessException(120001);
-		}
-	}
-
-	public void updateOrder(OrsOrder order) throws ProcessException
-	{
-		try
-		{
-			if(order != null)
-			{
-				template.update(order);
-			}
-			else
-			{
-				throw new ProcessException(217001);
-			}
-		}
-		catch(Exception ex)
-		{
-			ex.printStackTrace();
 		}
 	}
 
@@ -127,10 +100,11 @@ public class OrderDaoImpl implements OrderDao
 		catch(Exception ex)
 		{
 			ex.printStackTrace();
+			throw new ProcessException(120001);
 		}
 	}
 
-	public void deleteOrders(List orders) throws ProcessException
+	public void deleteOrders(List<OrsOrder> orders) throws ProcessException
 	{
 		try
 		{
@@ -155,10 +129,11 @@ public class OrderDaoImpl implements OrderDao
 		catch(Exception ex)
 		{
 			ex.printStackTrace();
+			throw new ProcessException(120001);
 		}
 	}
 
-	public QuerierResult getOrders(OrderQuerier querier)
+	public OrderQuerier getOrders(OrderQuerier querier)
 			throws ProcessException
 	{
 		DetachedCriteria queryCriteria = DetachedCriteria.forClass(OrsOrder.class);
@@ -247,13 +222,20 @@ public class OrderDaoImpl implements OrderDao
 				countCriteria.add(Restrictions.eq("remarks", querier
 						.getRemarks()));
 			}
+			// audited order
+			if(querier.isFilterAuditedOrders())
+			{
+				log.debugT("OrderDaoImpl: filter audited orders ");
+				queryCriteria.add(Restrictions.isNotNull("auditeddate"));
+				countCriteria.add(Restrictions.isNotNull("auditeddate"));
+			}
 			// query total count
 			Session session = template.getSessionFactory().openSession();
-			int totalCount = ((Integer)countCriteria.getExecutableCriteria(
+			int recordCount = ((Integer)countCriteria.getExecutableCriteria(
 					session).setProjection(Projections.rowCount())
 					.uniqueResult()).intValue();
 			session.close();
-			log.debugT("OrderDaoImpl: totalCount === " + totalCount);
+			log.debugT("OrderDaoImpl: totalCount === " + recordCount);
 			// order by
 			if(querier.getOrders() != null)
 			{
@@ -282,12 +264,26 @@ public class OrderDaoImpl implements OrderDao
 			}
 			List list = template.findByCriteria(queryCriteria, querier
 					.getStartIndex(), querier.getPageSize());
-			QuerierResult result = new QuerierResult();
-			result.setVoList(list);
-			result.setTotalCount(totalCount);
+			querier.setListOrder(list);
+			querier.setRecordCount(recordCount);
+			if(recordCount >= 0)
+			{
+				if(querier.getPageSize() > querier.getRecordCount())
+				{
+					querier.setPageCount(1);
+				}
+				else
+				{
+					int pageCount = recordCount / querier.getPageSize();
+					if(recordCount % querier.getPageSize() != 0)
+					{
+						pageCount++;
+					}
+					querier.setPageCount(pageCount);
+				}
+			}
 
-			return result;
-
+			return querier;
 		}
 		catch(Exception e)
 		{
